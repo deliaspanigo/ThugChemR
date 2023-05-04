@@ -162,7 +162,7 @@ server_ThugChemPage <- function(input, output, session) {
   output$show_resolution <- shiny::renderUI({
     # input$goButton
 
-    shiny::tabsetPanel(
+    tabsetPanel(
       shiny::tabPanel("En una imagen", shiny::plotOutput("plotPack")),
       shiny::tabPanel("En una imagen", shiny::uiOutput("newtabs")),
       shiny::tabPanel("En una matrix",
