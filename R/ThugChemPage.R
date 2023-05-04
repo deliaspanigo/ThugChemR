@@ -7,10 +7,10 @@
 #' if(FALSE) ThugChemPage()
 ThugChemPage <- function() {
 
-  ui <- ui_ThugChemPage()
+  ui <- ThugChemR::ui_ThugChemPage()
 
 
-  server <- server_ThugChemPage
+  server <- ThugChemR::server_ThugChemPage
 
   # viewer <- dialogViewer("Find and Replace", width = 1000, height = 800)
   # runGadget(ui, server, viewer = viewer)

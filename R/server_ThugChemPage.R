@@ -48,7 +48,7 @@ server_ThugChemPage <- function(input, output, session) {
 
 
 
-  capsule <-  eventReactive(input$goButton, {
+  capsule <-  shiny::eventReactive(input$goButton, {
 
     if(is.null(symbol())) return(NULL)
     if(is.null(selected_valence())) return(NULL)
@@ -75,7 +75,7 @@ server_ThugChemPage <- function(input, output, session) {
 
 
 
-  Resol02_oxyde <- reactive({
+  Resol02_oxyde <- shiny::reactive({
     if(is.null(capsule())) return(NULL)
 
     chem_symbol <- capsule()[[1]][1]
@@ -95,7 +95,7 @@ server_ThugChemPage <- function(input, output, session) {
   })
 
   # Texto Dinamico
-  output$newtabs <- renderUI({
+  output$newtabs <- shiny::renderUI({
 
     # tabs_n <- lapply(paste("tabs ", 1:4, sep = ""), tabPanel)
     #do.call(tabsetPanel, tabs_n)
@@ -107,14 +107,14 @@ server_ThugChemPage <- function(input, output, session) {
 
     sapply(1:n, function(i) {
 
-      renderUI({
-        div(
-          fluidRow(
+      shiny::renderUI({
+        shiny::div(
+          shiny::fluidRow(
             # column(4, withMathJax(Resol02_oxyde()[i,1])),
-            column(3, Resol02_oxyde()[i,2]),
-            column(6, withMathJax(Resol02_oxyde()[i,1])),
-            column(3, Resol02_oxyde()[i,3])
-          ), br()
+            shiny::column(3, Resol02_oxyde()[i,2]),
+            shiny::column(6, shiny::withMathJax(Resol02_oxyde()[i,1])),
+            shiny::column(3, Resol02_oxyde()[i,3])
+          ), shiny::br()
         )
       })
 
@@ -128,7 +128,7 @@ server_ThugChemPage <- function(input, output, session) {
 
 
 
-  output$format02_oxyde <- renderTable({
+  output$format02_oxyde <- shiny::renderTable({
 
     if(is.null(Resol02_oxyde())) return(Resol02_oxyde())
 
@@ -147,7 +147,7 @@ server_ThugChemPage <- function(input, output, session) {
 
 
 
-  output$los_textos <- renderUI({
+  output$los_textos <- shiny::renderUI({
     # num <- as.integer(input$num)
     if(is.null(Resol02_oxyde())) return(NULL)
 
@@ -159,17 +159,17 @@ server_ThugChemPage <- function(input, output, session) {
 
   #tableOutput("table")
 
-  output$show_resolution <- renderUI({
+  output$show_resolution <- shiny::renderUI({
     # input$goButton
 
     shiny::tabsetPanel(
       shiny::tabPanel("En una imagen", shiny::plotOutput("plotPack")),
       shiny::tabPanel("En una imagen", shiny::uiOutput("newtabs")),
       shiny::tabPanel("En una matrix",
-                      withMathJax(
-                        helpText('You do not see me initially: $$1H_{1}+1O_{1} ------> 0H_{0}O_{0}$$')
+                      shiny::withMathJax(
+                        shiny::helpText('You do not see me initially: $$1H_{1}+1O_{1} ------> 0H_{0}O_{0}$$')
                       ),
-                      withMathJax(shiny::tableOutput("format02_oxyde"))),
+                      shiny::withMathJax(shiny::tableOutput("format02_oxyde"))),
       shiny::tabPanel("Como texto", "LA NADA 02"),
     )
 

@@ -18,12 +18,12 @@ ui <- shiny::fluidPage(
                     shiny::uiOutput("ui_valence")
       ),
       shiny::column(4,
-                    actionButton("goButton", "Go!", class = "btn-success"),
+                    shiny::actionButton("goButton", "Go!", class = "btn-success"),
                     shiny::p("Click the button to update the value displayed in the main panel.")
       )
     ) ,
 
-    uiOutput("show_resolution")
+    shiny::uiOutput("show_resolution")
 
   )
 )
