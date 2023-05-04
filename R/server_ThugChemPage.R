@@ -162,7 +162,7 @@ server_ThugChemPage <- function(input, output, session) {
   output$show_resolution <- shiny::renderUI({
     # input$goButton
 
-    tabsetPanel(
+    shiny::tabsetPanel(
       shiny::tabPanel("En una imagen", shiny::plotOutput("plotPack")),
       shiny::tabPanel("En una imagen", shiny::uiOutput("newtabs")),
       shiny::tabPanel("En una matrix",
@@ -170,7 +170,7 @@ server_ThugChemPage <- function(input, output, session) {
                         shiny::helpText('You do not see me initially: $$1H_{1}+1O_{1} ------> 0H_{0}O_{0}$$')
                       ),
                       shiny::withMathJax(shiny::tableOutput("format02_oxyde"))),
-      shiny::tabPanel("Como texto", "LA NADA 02"),
+      shiny::tabPanel("Como texto", "LA NADA 02")
     )
 
   })
