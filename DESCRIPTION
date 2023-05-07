@@ -16,4 +16,5 @@ Imports:
     FRACTION,
     latex2exp,
     shiny,
-    stringr
+    stringr,
+    usethis

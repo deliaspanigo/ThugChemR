@@ -9,6 +9,6 @@ check()
 
 install()
 
-use_package( 'stringr')
+# use_package( 'usethis')
 
-use_data_raw()
+# use_data_raw()
