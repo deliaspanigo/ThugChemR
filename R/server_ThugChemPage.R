@@ -13,6 +13,9 @@ server_ThugChemPage <- function(input, output, session) {
 
 
   ###########
+  language <- shiny::reactive({ "esp" })
+
+
   symbol <- shiny::reactive({
     input$symbol
   })
@@ -21,15 +24,15 @@ server_ThugChemPage <- function(input, output, session) {
 
     the_symbol <- symbol()
 
-    dt_valence <- ThugChemR::DataTC_03_Valences$Symbol == the_symbol
-    all_valence <- ThugChemR::DataTC_03_Valences$EachValence[dt_valence]
+    dt_valence <- ThugChemR::DataTC_03_Valences[["eng"]]$Symbol == the_symbol
+    all_valence <- ThugChemR::DataTC_03_Valences[["eng"]]$SelectedValence[dt_valence]
     all_valence
 
   })
 
   output$ui_valence <- shiny::renderUI({
 
-    shiny::selectInput(inputId = "valence", label = "Valence",
+    shiny::radioButtons(inputId = "valence", label = "Valencia",
                        choices = all_valence(),
                        selected = all_valence()[1])
 
@@ -40,8 +43,8 @@ server_ThugChemPage <- function(input, output, session) {
 
   gas_status_element <- shiny::reactive({
 
-    dt_symbol <- ThugChemR::DataTC_01_PeriodicTable_eng$Symbol == symbol()
-    the_status <- ThugChemR::DataTC_02_Elements$State_Gas[dt_symbol]
+    dt_symbol <- ThugChemR::DataTC_01_PeriodicTable[[language()]]$Symbol == symbol()
+    the_status <- ThugChemR::DataTC_02_Elements[[language()]]$State_Gas[dt_symbol]
     the_status
     # cat("the_status: ", the_status, "\n")
   })
@@ -53,26 +56,44 @@ server_ThugChemPage <- function(input, output, session) {
     if(is.null(symbol())) return(NULL)
     if(is.null(selected_valence())) return(NULL)
     if(is.null(gas_status_element())) return(NULL)
+    if(is.null(language())) return(NULL)
 
     armed <- list(symbol(),
                   as.numeric(as.character(selected_valence())),
-                  gas_status_element())
+                  gas_status_element(),
+                  language())
     armed
   })
 
-  output$plotPack <- shiny::renderPlot({
+  output$plotPack01 <- shiny::renderPlot({
 
     if(is.null(capsule())) return(NULL)
 
     chem_symbol <- capsule()[[1]]
     the_valence <- capsule()[[2]]
+    language <- capsule()[[4]]
 
-    ThugChemR::Plot_PackTC_04_Oxyde(chem_symbol = chem_symbol,
-                                    element_valence = the_valence)
+    ThugChemR::Plot_PackTC_04_Oxyde01(chem_symbol = chem_symbol,
+                                    element_valence = the_valence,
+                                    language = language)
 
     # })
   })
 
+  output$plotPack02 <- shiny::renderPlot({
+
+    if(is.null(capsule())) return(NULL)
+
+    chem_symbol <- capsule()[[1]]
+    the_valence <- capsule()[[2]]
+    language <- capsule()[[4]]
+
+    ThugChemR::Plot_PackTC_04_Oxyde02(chem_symbol = chem_symbol,
+                                      element_valence = the_valence,
+                                      language = language)
+
+    # })
+  })
 
 
   Resol02_oxyde <- shiny::reactive({
@@ -81,24 +102,100 @@ server_ThugChemPage <- function(input, output, session) {
     chem_symbol <- capsule()[[1]][1]
     the_valence <- capsule()[[2]][1]
     gas_status_element <- capsule()[[3]][1]
+    language <- capsule()[[4]][1]
 
     # chem_symbol <- "H"
     # the_valence <- 1
     # gas_status_element <- TRUE
 
-
+    # # # NOTAAAAA # # #
+    # Esto hay que cambiarlo, para que no lo calcule, sino que
+    # lo tome directamente de PackTC_04_Oxyde !!!!!!!!!!!
     ThugChemR::Resolution_Oxyde(chem_symbol = chem_symbol,
                                 element_valence = the_valence,
-                                gas_status_element = gas_status_element)[["format02_oxyde"]]
+                                gas_status_element = gas_status_element,
+                                language = language)[["format02_oxyde"]]
 
 
   })
+
+  all_posibilities <- reactive({
+
+    names(PackTC_04_Oxyde[["eng"]])
+
+  })
+
+  the_selected <- reactive({
+
+    if(is.null(capsule())) return(NULL)
+
+    chem_symbol <- capsule()[[1]]
+    the_valence <- capsule()[[2]]
+    language <- capsule()[[4]]
+
+    armado <- paste0("_", chem_symbol, the_valence, "_")
+
+    dt_pos <- grepl(pattern = armado, x = all_posibilities())
+    all_posibilities()[dt_pos]
+
+  })
+
+  special_selection <- shiny::reactive({
+
+    the_selected <- the_selected()
+    language <- language()
+
+    # selected_pack_oxyde()[["Balance_Oxyde"]]
+    PackTC_04_Oxyde[[language]][[the_selected]][["Balance_Oxyde"]]
+  })
+
+  special_selection02 <- reactive({
+
+    the_selected <- the_selected()
+    language <- language()
+    PackTC_04_Oxyde[[language]][[the_selected]][["Level06_LaTeX02"]]
+  })
+  max_table <- reactive({nrow(special_selection())})
+
+  # aca hayq ue hacer alguna magia para no tener que poner el 8
+  # y que tome max_table() directamente
+  observe({
+    lapply(1:8, function(x) {
+      output[[paste0("table_", x)]] <- renderTable({ special_selection()[[x]] })
+    })
+  })
+
+  # Texto Dinamico
+  output$tablas_dinamico <- shiny::renderUI({
+    # i <- 1
+    # shiny::div(
+    #   tableOutput(paste0("table_", i))
+    # )
+
+    n <- 8
+    sapply(1:n, function(i) {
+
+
+      shiny::renderUI(
+
+        shiny::fluidRow(
+          shiny::column(6, h3(shiny::withMathJax(Resol02_oxyde()[i,1]))),
+          shiny::column(2),
+          shiny::div(shiny::column(4, tableOutput(paste0("table_", i))), style = "font-size:150%")
+        )
+      )
+
+  })
+  })
+
 
   # Texto Dinamico
   output$newtabs <- shiny::renderUI({
 
     # tabs_n <- lapply(paste("tabs ", 1:4, sep = ""), tabPanel)
     #do.call(tabsetPanel, tabs_n)
+
+
 
     # tabs_n <- lapply(paste("tabs ", 1:nrow(Resol02_oxyde()), sep = ""), tabPanel)
     # do.call(tabsetPanel, tabs_n)
@@ -111,9 +208,10 @@ server_ThugChemPage <- function(input, output, session) {
         shiny::div(
           shiny::fluidRow(
             # column(4, withMathJax(Resol02_oxyde()[i,1])),
-            shiny::column(3, Resol02_oxyde()[i,2]),
-            shiny::column(6, shiny::withMathJax(Resol02_oxyde()[i,1])),
-            shiny::column(3, Resol02_oxyde()[i,3])
+            shiny::column(3, h3(Resol02_oxyde()[i,2])),
+            shiny::column(6, h3(shiny::withMathJax(Resol02_oxyde()[i,1]))),
+            shiny::column(3, h3(Resol02_oxyde()[i,3])) # ,
+           #  shiny::column(3, tableOutput(paste0("table_", i)))
           ), shiny::br()
         )
       })
@@ -128,23 +226,6 @@ server_ThugChemPage <- function(input, output, session) {
 
 
 
-  output$format02_oxyde <- shiny::renderTable({
-
-    if(is.null(Resol02_oxyde())) return(Resol02_oxyde())
-
-    Resol02_oxyde()
-    #
-    # x <- rnorm(2)
-    # y <- rnorm(2, 3)
-    # tab <- data.frame(x = x, y = y)
-    # rownames(tab) <- c("\\(\\alpha\\)",
-    #                    "\\(\\beta\\)")
-    # tab
-
-  },
-  include.rownames = TRUE,
-  include.colnames = TRUE)
-
 
 
   output$los_textos <- shiny::renderUI({
@@ -155,23 +236,89 @@ server_ThugChemPage <- function(input, output, session) {
 
   })
 
-  # ui.R
 
-  #tableOutput("table")
+  ##################################
+  # aca hayq ue hacer alguna magia para no tener que poner el 8
+  # y que tome max_table() directamente
+  observe({
+    lapply(1:8, function(x) {
+      output[[paste0("plot_", x)]] <- renderPlot({
+
+        plot(1:10, 1:10, xlab = "", ylab = "",
+             axes = F, col = input$bg_col)
+
+        # Plot region color
+        rect(par("usr")[1], par("usr")[3],
+             par("usr")[2], par("usr")[4],
+             col = input$bg_col) # Color
+
+        # Add a new plot
+        par(new = TRUE)
+
+
+        plot(1:10, 1:10, xlab = "", ylab = "",
+             axes = F, col = input$bg_col,
+             main = paste0("Paso ", x, " de ", "8 - Óxidos"))
+
+        # Ecuacion
+        graphics::text(x = 5, y = 2,
+             labels = latex2exp::TeX(special_selection02()[x,1]),
+                                     cex = 2 )
+
+        # General
+        text(5, 7, Resol02_oxyde()[x,2], cex = 2, col = input$"text_col01" )
+
+        # Especifico
+        text(5, 4, Resol02_oxyde()[x,3], cex = 2, col = input$"text_col02" )
+
+         })
+    })
+  })
+
+  observe({
+    lapply(1:8, function(x) {
+      output[[paste0("table2_", x)]] <- renderTable({ special_selection()[[x]] })
+    })
+  })
+
+  # Texto Dinamico
+  output$ploteo_dinamico <- shiny::renderUI({
+
+    n <- 8
+    sapply(1:n, function(i) {
+
+
+      shiny::renderUI(
+
+        shiny::fluidRow(
+          shiny::column(8, plotOutput(paste0("plot_", i))),
+          shiny::column(4, br(), br(),br(), br(),
+                        div(tableOutput(paste0("table2_", i))), style = "font-size:150%")
+
+      )
+      )
+
+
+    })
+  })
+  ########################################################
+
+
 
   output$show_resolution <- shiny::renderUI({
     # input$goButton
 
+    div(
     shiny::tabsetPanel(
-      shiny::tabPanel("En una imagen", shiny::plotOutput("plotPack")),
-      shiny::tabPanel("En una imagen", shiny::uiOutput("newtabs")),
-      shiny::tabPanel("En una matrix",
-                      shiny::withMathJax(
-                        shiny::helpText('You do not see me initially: $$1H_{1}+1O_{1} ------> 0H_{0}O_{0}$$')
-                      ),
-                      shiny::withMathJax(shiny::tableOutput("format02_oxyde"))),
-      shiny::tabPanel("Como texto", "LA NADA 02")
+      shiny::tabPanel("Texto paso a paso", shiny::uiOutput("newtabs")),
+      shiny::tabPanel("Pleoteo Dinamico", shiny::uiOutput("ploteo_dinamico")),
+      shiny::tabPanel("En una imagen 01", shiny::plotOutput("plotPack01")),
+      shiny::tabPanel("Nomenclatura", shiny::plotOutput("plotPack02")),
+      shiny::tabPanel("Como texto", shiny::uiOutput("tablas_dinamico"))
+
+
     )
+    , style = "font-size:110%")
 
   })
 

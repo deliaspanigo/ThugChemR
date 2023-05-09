@@ -20,6 +20,7 @@ Resolution_Oxyde <- function(chem_symbol,
   # chem_symbol <- "Fe"
   # element_valence <- 2
   # gas_status_element <- TRUE
+  # language = "eng"
 
 
 
@@ -156,6 +157,73 @@ Resolution_Oxyde <- function(chem_symbol,
   names(output)[9] <- "Nomenclature_Oxyde"
 
   #######################################################
+
+
+  #####################################################
+
+  materia_prima <- output[[1]]
+
+  the_cols <- c("Element", "Reactive", "Product")
+  the_rows <- c(chem_symbol, "O")
+
+  balance_modelo <- matrix(NA, length(the_rows), length(the_cols))
+  colnames(balance_modelo) <- the_cols
+  rownames(balance_modelo) <- 1:length(the_rows)
+  balance_modelo[,1] <- the_rows
+
+  balance_bruto <- lapply(1:nrow(materia_prima), function(x){
+
+    the_output <- balance_modelo
+
+    # El elemento
+    the_output[1,2] <- paste0(materia_prima$coef1[x], "*", materia_prima$subER[x])
+    the_output[1,3] <- paste0(materia_prima$coef3[x], "*", materia_prima$subEP[x])
+
+    # El oxigeno
+    the_output[2,2] <- paste0(materia_prima$coef2[x], "*", materia_prima$subOR[x])
+    the_output[2,3] <- paste0(materia_prima$coef3[x], "*", materia_prima$subOP[x])
+
+    return(the_output)
+  })
+
+  balance_suma <- lapply(1:length(balance_bruto), function(x){
+
+    the_output <- balance_bruto[[x]]
+
+    # El elemento
+    the_output[1,2] <- eval(parse(text = the_output[1,2]))
+    the_output[1,3] <- eval(parse(text = the_output[1,3]))
+
+    # El oxigeno
+    the_output[2,2] <- eval(parse(text = the_output[2,2]))
+    the_output[2,3] <- eval(parse(text = the_output[2,3]))
+
+    return(the_output)
+  })
+
+  balance_rejunte <- lapply(1:length(balance_bruto), function(x){
+
+    elegida_bruto <- balance_bruto[[x]]
+    elegida_suma <- balance_suma[[x]]
+    the_output <- balance_modelo
+
+    # El elemento
+    the_output[1,2] <- paste0(elegida_bruto[1,2], " = ", elegida_suma[1,2])
+    the_output[1,3] <- paste0(elegida_bruto[1,3], " = ", elegida_suma[1,3])
+
+    # El oxigeno
+    the_output[2,2] <- paste0(elegida_bruto[2,2], " = ", elegida_suma[2,2])
+    the_output[2,3] <- paste0(elegida_bruto[2,3], " = ", elegida_suma[2,3])
+
+    return(the_output)
+  })
+
+  output[[10]] <- balance_rejunte
+
+  names(output)[10] <- "Balance_Oxyde"
+
+  #######################################################
+
   # Final Return
   return(output)
 }

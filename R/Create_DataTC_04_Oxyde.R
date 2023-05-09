@@ -165,7 +165,9 @@ Create_DataTC_04_Oxyde <- function(){
     new_columns[[8]][!data_input$Status_oxyde] <- "----"
     names(new_columns)[8] <- "OxydeFullName_Stock"
 
-
+    new_columns[[9]] <- rep("----", nrow(data_input))
+    new_columns[[9]][!data_input$Status_oxyde] <- "----"
+    names(new_columns)[9] <- "OxydeFullName_Stock"
 
     # Final Armed
     columns_pack <- do.call(cbind.data.frame, new_columns)
