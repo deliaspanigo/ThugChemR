@@ -1,0 +1,234 @@
+﻿Order;Symbol;Name;OxydeName_Classic;AtomicNumber;Group;Period;Type;Subtype;State;Valence;AmountOfValences;OrderGeneralValences;OrderValenceOnElement;SelectedValence;RomanValence;OxydeName_Classic;OxydeFullName_Classic;OxydeFullName_IUPAC;amount01_oxyde_Stock;amount02_oxyde_Stock;OxydeFullName_IUPAC
+1;H;Hidrógeno;de Hidrógeno;1;1;1;No Metal;Otros no metales;Gas;1;1;1;1;1;I;Hidrógeno;Óxido Hidrógeno;Óxido de Hidrógeno (I);Di;Mono;DiÓxido de MonoHidrógeno
+2;He;Helio;----;2;18;1;Gas Noble;-;Gas;0;1;2;1;0;;----;----;----;----;----;----
+3;Li;Litio;de Litio;3;1;2;Metal;Alcalino;Sólido;1;1;3;1;1;I;Litio;Óxido Litio;Óxido de Litio (I);Di;Mono;DiÓxido de MonoLitio
+4;Be;Berilio;de Berilio;4;2;2;Metal;Tierras alcalinas;Sólido;2;1;4;1;2;II;Berilio;Óxido Berilio;Óxido de Berilio (II);Mono;Mono;MonoÓxido de MonoBerilio
+5;B;Boro;de Boro;5;13;2;Metaloide;-;Sólido;3;1;5;1;3;III;Boro;Óxido Boro;Óxido de Boro (III);Di;Tri;DiÓxido de TriBoro
+6;C;Carbón;Carbonoso;6;14;2;No Metal;Otros no metales;Sólido;2,4;2;6;1;2;II;Carbón;Óxido Carbón;Óxido de Carbón (II);Mono;Mono;MonoÓxido de MonoCarbón
+7;C;Carbón;Carbónico;6;14;2;No Metal;Otros no metales;Sólido;2,4;2;7;2;4;IV;Carbón;Óxido Carbón;Óxido de Carbón (IV);Mono;Di;MonoÓxido de DiCarbón
+8;N;Nitrógeno;Nitrogenoso;7;15;2;No Metal;Otros no metales;Gas;2,3,4,5;4;8;1;2;II;Nitrógeno;Óxido Nitrógeno;Óxido de Nitrógeno (II);Mono;Mono;MonoÓxido de MonoNitrógeno
+9;N;Nitrógeno;Nitrogenoso;7;15;2;No Metal;Otros no metales;Gas;2,3,4,5;4;9;2;3;III;Nitrógeno;Óxido Nitrógeno;Óxido de Nitrógeno (III);Di;Tri;DiÓxido de TriNitrógeno
+10;N;Nitrógeno;Nítrico;7;15;2;No Metal;Otros no metales;Gas;2,3,4,5;4;10;3;4;IV;Nitrógeno;Óxido Nitrógeno;Óxido de Nitrógeno (IV);Mono;Di;MonoÓxido de DiNitrógeno
+11;N;Nitrógeno;Nítrico;7;15;2;No Metal;Otros no metales;Gas;2,3,4,5;4;11;4;5;V;Nitrógeno;Óxido Nitrógeno;Óxido de Nitrógeno (V);Di;Penta;DiÓxido de PentaNitrógeno
+12;O;Oxígeno;----;8;16;2;No Metal;Otros no metales;Gas;2;1;12;1;2;II;Oxígeno;Óxido Oxígeno;Óxido de Oxígeno (II);Mono;Mono;MonoÓxido de MonoOxígeno
+13;F;Flúor;de Flúor;9;17;2;No Metal;Halógenos;Gas;1;1;13;1;1;I;Flúor;Óxido Flúor;Óxido de Flúor (I);Di;Mono;DiÓxido de MonoFlúor
+14;Ne;Neón;----;10;18;2;Gas Noble;-;Gas;0;1;14;1;0;;----;----;----;----;----;----
+15;Na;Sodio;de Sodio;11;1;3;Metal;Alcalino;Sólido;1;1;15;1;1;I;Sodio;Óxido Sodio;Óxido de Sodio (I);Di;Mono;DiÓxido de MonoSodio
+16;Mg;Magnesio;de Magnesio;12;2;3;Metal;Tierras alcalinas;Sólido;2;1;16;1;2;II;Magnesio;Óxido Magnesio;Óxido de Magnesio (II);Mono;Mono;MonoÓxido de MonoMagnesio
+17;Al;Aluminio;de Aluminio;13;13;3;Metal;Metales del Bloque p;Sólido;3;1;17;1;3;III;Aluminio;Óxido Aluminio;Óxido de Aluminio (III);Di;Tri;DiÓxido de TriAluminio
+18;Si;Silicio;de Silicio;14;14;3;Metaloide;-;Sólido;4;1;18;1;4;IV;Silicio;Óxido Silicio;Óxido de Silicio (IV);Mono;Di;MonoÓxido de DiSilicio
+19;P;Fósforo;Fosforoso;15;15;3;No Metal;Otros no metales;Sólido;3,4,5;3;19;1;3;III;Fósforo;Óxido Fósforo;Óxido de Fósforo (III);Di;Tri;DiÓxido de TriFósforo
+20;P;Fósforo;Fosforoso;15;15;3;No Metal;Otros no metales;Sólido;3,4,5;3;20;2;4;IV;Fósforo;Óxido Fósforo;Óxido de Fósforo (IV);Mono;Di;MonoÓxido de DiFósforo
+21;P;Fósforo;Fosfórico;15;15;3;No Metal;Otros no metales;Sólido;3,4,5;3;21;3;5;V;Fósforo;Óxido Fósforo;Óxido de Fósforo (V);Di;Penta;DiÓxido de PentaFósforo
+22;S;Azufre;Sulfuroso;16;16;3;No Metal;Otros no metales;Sólido;2,4,6;3;22;1;2;II;Azufre;Óxido Azufre;Óxido de Azufre (II);Mono;Mono;MonoÓxido de MonoAzufre
+23;S;Azufre;Sulfuroso;16;16;3;No Metal;Otros no metales;Sólido;2,4,6;3;23;2;4;IV;Azufre;Óxido Azufre;Óxido de Azufre (IV);Mono;Di;MonoÓxido de DiAzufre
+24;S;Azufre;Sulfúrico;16;16;3;No Metal;Otros no metales;Sólido;2,4,6;3;24;3;6;VI;Azufre;Óxido Azufre;Óxido de Azufre (VI);Mono;Tri;MonoÓxido de TriAzufre
+25;Cl;Cloro;Cloroso;17;17;3;No Metal;Halógenos;Gas;1,3,5,7;4;25;1;1;I;Cloro;Óxido Cloro;Óxido de Cloro (I);Di;Mono;DiÓxido de MonoCloro
+26;Cl;Cloro;Cloroso;17;17;3;No Metal;Halógenos;Gas;1,3,5,7;4;26;2;3;III;Cloro;Óxido Cloro;Óxido de Cloro (III);Di;Tri;DiÓxido de TriCloro
+27;Cl;Cloro;Clórico;17;17;3;No Metal;Halógenos;Gas;1,3,5,7;4;27;3;5;V;Cloro;Óxido Cloro;Óxido de Cloro (V);Di;Penta;DiÓxido de PentaCloro
+28;Cl;Cloro;Clórico;17;17;3;No Metal;Halógenos;Gas;1,3,5,7;4;28;4;7;VII;Cloro;Óxido Cloro;Óxido de Cloro (VII);Di;Hepta;DiÓxido de HeptaCloro
+29;Ar;Argón;----;18;18;3;Gas Noble;-;Gas;0;1;29;1;0;;----;----;----;----;----;----
+30;K;Potasio;de Potasio;19;1;4;Metal;Alcalino;Sólido;1;1;30;1;1;I;Potasio;Óxido Potasio;Óxido de Potasio (I);Di;Mono;DiÓxido de MonoPotasio
+31;Ca;Calcio;de Calcio;20;2;4;Metal;Tierras alcalinas;Sólido;2;1;31;1;2;II;Calcio;Óxido Calcio;Óxido de Calcio (II);Mono;Mono;MonoÓxido de MonoCalcio
+32;Sc;Escandio;de Escandio;21;3;4;Metal;Metales de transición;Sólido;3;1;32;1;3;III;Escandio;Óxido Escandio;Óxido de Escandio (III);Di;Tri;DiÓxido de TriEscandio
+33;Ti;Titanio;Titanoso;22;4;4;Metal;Metales de transición;Sólido;3,4;2;33;1;3;III;Titanio;Óxido Titanio;Óxido de Titanio (III);Di;Tri;DiÓxido de TriTitanio
+34;Ti;Titanio;Titánico;22;4;4;Metal;Metales de transición;Sólido;3,4;2;34;2;4;IV;Titanio;Óxido Titanio;Óxido de Titanio (IV);Mono;Di;MonoÓxido de DiTitanio
+35;V;Vanadio;Vanadoso;23;5;4;Metal;Metales de transición;Sólido;2,3,4,5;4;35;1;2;II;Vanadio;Óxido Vanadio;Óxido de Vanadio (II);Mono;Mono;MonoÓxido de MonoVanadio
+36;V;Vanadio;Vanadoso;23;5;4;Metal;Metales de transición;Sólido;2,3,4,5;4;36;2;3;III;Vanadio;Óxido Vanadio;Óxido de Vanadio (III);Di;Tri;DiÓxido de TriVanadio
+37;V;Vanadio;Vanádico;23;5;4;Metal;Metales de transición;Sólido;2,3,4,5;4;37;3;4;IV;Vanadio;Óxido Vanadio;Óxido de Vanadio (IV);Mono;Di;MonoÓxido de DiVanadio
+38;V;Vanadio;Vanádico;23;5;4;Metal;Metales de transición;Sólido;2,3,4,5;4;38;4;5;V;Vanadio;Óxido Vanadio;Óxido de Vanadio (V);Di;Penta;DiÓxido de PentaVanadio
+39;Cr;Cromo;Cromoso;24;6;4;Metal;Metales de transición;Sólido;2,3,6;3;39;1;2;II;Cromo;Óxido Cromo;Óxido de Cromo (II);Mono;Mono;MonoÓxido de MonoCromo
+40;Cr;Cromo;Cromoso;24;6;4;Metal;Metales de transición;Sólido;2,3,6;3;40;2;3;III;Cromo;Óxido Cromo;Óxido de Cromo (III);Di;Tri;DiÓxido de TriCromo
+41;Cr;Cromo;Crómico;24;6;4;Metal;Metales de transición;Sólido;2,3,6;3;41;3;6;VI;Cromo;Óxido Cromo;Óxido de Cromo (VI);Mono;Tri;MonoÓxido de TriCromo
+42;Mn;Manganeso;Manganoso;25;7;4;Metal;Metales de transición;Sólido;2,3,4,6,7;5;42;1;2;II;Manganeso;Óxido Manganeso;Óxido de Manganeso (II);Mono;Mono;MonoÓxido de MonoManganeso
+43;Mn;Manganeso;Manganoso;25;7;4;Metal;Metales de transición;Sólido;2,3,4,6,7;5;43;2;3;III;Manganeso;Óxido Manganeso;Óxido de Manganeso (III);Di;Tri;DiÓxido de TriManganeso
+44;Mn;Manganeso;Mangánico;25;7;4;Metal;Metales de transición;Sólido;2,3,4,6,7;5;44;3;4;IV;Manganeso;Óxido Manganeso;Óxido de Manganeso (IV);Mono;Di;MonoÓxido de DiManganeso
+45;Mn;Manganeso;Mangánico;25;7;4;Metal;Metales de transición;Sólido;2,3,4,6,7;5;45;4;6;VI;Manganeso;Óxido Manganeso;Óxido de Manganeso (VI);Mono;Tri;MonoÓxido de TriManganeso
+46;Mn;Manganeso;Mangánico;25;7;4;Metal;Metales de transición;Sólido;2,3,4,6,7;5;46;5;7;VII;Manganeso;Óxido Manganeso;Óxido de Manganeso (VII);Di;Hepta;DiÓxido de HeptaManganeso
+47;Fe;Hierro;Ferroso;26;8;4;Metal;Metales de transición;Sólido;2,3;2;47;1;2;II;Hierro;Óxido Hierro;Óxido de Hierro (II);Mono;Mono;MonoÓxido de MonoHierro
+48;Fe;Hierro;Férrico;26;8;4;Metal;Metales de transición;Sólido;2,3;2;48;2;3;III;Hierro;Óxido Hierro;Óxido de Hierro (III);Di;Tri;DiÓxido de TriHierro
+49;Co;Cobalto;Cobaltoso;27;9;4;Metal;Metales de transición;Sólido;2,3;2;49;1;2;II;Cobalto;Óxido Cobalto;Óxido de Cobalto (II);Mono;Mono;MonoÓxido de MonoCobalto
+50;Co;Cobalto;Cobáltico;27;9;4;Metal;Metales de transición;Sólido;2,3;2;50;2;3;III;Cobalto;Óxido Cobalto;Óxido de Cobalto (III);Di;Tri;DiÓxido de TriCobalto
+51;Ni;Níquel;Niqueloso;28;10;4;Metal;Metales de transición;Sólido;2,3;2;51;1;2;II;Níquel;Óxido Níquel;Óxido de Níquel (II);Mono;Mono;MonoÓxido de MonoNíquel
+52;Ni;Níquel;Niquélico;28;10;4;Metal;Metales de transición;Sólido;2,3;2;52;2;3;III;Níquel;Óxido Níquel;Óxido de Níquel (III);Di;Tri;DiÓxido de TriNíquel
+53;Cu;Cobre;Cuproso;29;11;4;Metal;Metales de transición;Sólido;1,2;2;53;1;1;I;Cobre;Óxido Cobre;Óxido de Cobre (I);Di;Mono;DiÓxido de MonoCobre
+54;Cu;Cobre;Cúprico;29;11;4;Metal;Metales de transición;Sólido;1,2;2;54;2;2;II;Cobre;Óxido Cobre;Óxido de Cobre (II);Mono;Mono;MonoÓxido de MonoCobre
+55;Zn;Zinc;de Zinc;30;12;4;Metal;Metales de transición;Sólido;2;1;55;1;2;II;Zinc;Óxido Zinc;Óxido de Zinc (II);Mono;Mono;MonoÓxido de MonoZinc
+56;Ga;Galio;de Galio;31;13;4;Metal;Metales del Bloque p;Líquido;3;1;56;1;3;III;Galio;Óxido Galio;Óxido de Galio (III);Di;Tri;DiÓxido de TriGalio
+57;Ge;Germanio;de Germanio;32;14;4;Metaloide;-;Sólido;4;1;57;1;4;IV;Germanio;Óxido Germanio;Óxido de Germanio (IV);Mono;Di;MonoÓxido de DiGermanio
+58;As;Arsénico;Arsenoso;33;15;4;Metaloide;-;Sólido;3,5;2;58;1;3;III;Arsénico;Óxido Arsénico;Óxido de Arsénico (III);Di;Tri;DiÓxido de TriArsénico
+59;As;Arsénico;Arsénico;33;15;4;Metaloide;-;Sólido;3,5;2;59;2;5;V;Arsénico;Óxido Arsénico;Óxido de Arsénico (V);Di;Penta;DiÓxido de PentaArsénico
+60;Se;Selenio;Selenoso;34;16;4;No Metal;Otros no metales;Sólido;4,6;2;60;1;4;IV;Selenio;Óxido Selenio;Óxido de Selenio (IV);Mono;Di;MonoÓxido de DiSelenio
+61;Se;Selenio;Selénico;34;16;4;No Metal;Otros no metales;Sólido;4,6;2;61;2;6;VI;Selenio;Óxido Selenio;Óxido de Selenio (VI);Mono;Tri;MonoÓxido de TriSelenio
+62;Br;Bromo;Brosomo;35;17;4;No Metal;Halógenos;Líquido;1,5;2;62;1;1;I;Bromo;Óxido Bromo;Óxido de Bromo (I);Di;Mono;DiÓxido de MonoBromo
+63;Br;Bromo;Brómico;35;17;4;No Metal;Halógenos;Líquido;1,5;2;63;2;5;V;Bromo;Óxido Bromo;Óxido de Bromo (V);Di;Penta;DiÓxido de PentaBromo
+64;Kr;Criptón;----;36;18;4;Gas Noble;-;Gas;0;1;64;1;0;;----;----;----;----;----;----
+65;Rb;Rubidio;de Rubidio;37;1;5;Metal;Alcalino;Sólido;1;1;65;1;1;I;Rubidio;Óxido Rubidio;Óxido de Rubidio (I);Di;Mono;DiÓxido de MonoRubidio
+66;Sr;Estroncio;de Estroncio;38;2;5;Metal;Tierras alcalinas;Sólido;2;1;66;1;2;II;Estroncio;Óxido Estroncio;Óxido de Estroncio (II);Mono;Mono;MonoÓxido de MonoEstroncio
+67;Y;Yodo;de Yodo;39;3;5;Metal;Metales de transición;Sólido;3;1;67;1;3;III;Yodo;Óxido Yodo;Óxido de Yodo (III);Di;Tri;DiÓxido de TriYodo
+68;Zr;Circonio;de Circonio;40;4;5;Metal;Metales de transición;Sólido;4;1;68;1;4;IV;Circonio;Óxido Circonio;Óxido de Circonio (IV);Mono;Di;MonoÓxido de DiCirconio
+69;Nb;Niobio;Noboso;41;5;5;Metal;Metales de transición;Sólido;3,5;2;69;1;3;III;Niobio;Óxido Niobio;Óxido de Niobio (III);Di;Tri;DiÓxido de TriNiobio
+70;Nb;Niobio;Núbico;41;5;5;Metal;Metales de transición;Sólido;3,5;2;70;2;5;V;Niobio;Óxido Niobio;Óxido de Niobio (V);Di;Penta;DiÓxido de PentaNiobio
+71;Mo;Molibdeno;Molibdoso;42;6;5;Metal;Metales de transición;Sólido;2,3,4,5,6;5;71;1;2;II;Molibdeno;Óxido Molibdeno;Óxido de Molibdeno (II);Mono;Mono;MonoÓxido de MonoMolibdeno
+72;Mo;Molibdeno;Molibdoso;42;6;5;Metal;Metales de transición;Sólido;2,3,4,5,6;5;72;2;3;III;Molibdeno;Óxido Molibdeno;Óxido de Molibdeno (III);Di;Tri;DiÓxido de TriMolibdeno
+73;Mo;Molibdeno;Molibdénico;42;6;5;Metal;Metales de transición;Sólido;2,3,4,5,6;5;73;3;4;IV;Molibdeno;Óxido Molibdeno;Óxido de Molibdeno (IV);Mono;Di;MonoÓxido de DiMolibdeno
+74;Mo;Molibdeno;Molibdénico;42;6;5;Metal;Metales de transición;Sólido;2,3,4,5,6;5;74;4;5;V;Molibdeno;Óxido Molibdeno;Óxido de Molibdeno (V);Di;Penta;DiÓxido de PentaMolibdeno
+75;Mo;Molibdeno;Molibdénico;42;6;5;Metal;Metales de transición;Sólido;2,3,4,5,6;5;75;5;6;VI;Molibdeno;Óxido Molibdeno;Óxido de Molibdeno (VI);Mono;Tri;MonoÓxido de TriMolibdeno
+76;Tc;Tecnecio;de Tecnecio;43;7;5;Metal;Metales de transición;Sólido;7;1;76;1;7;VII;Tecnecio;Óxido Tecnecio;Óxido de Tecnecio (VII);Di;Hepta;DiÓxido de HeptaTecnecio
+77;Ru;Rutenio;Rutenoso;44;8;5;Metal;Metales de transición;Sólido;2,3,4,6,8;5;77;1;2;II;Rutenio;Óxido Rutenio;Óxido de Rutenio (II);Mono;Mono;MonoÓxido de MonoRutenio
+78;Ru;Rutenio;Rutenoso;44;8;5;Metal;Metales de transición;Sólido;2,3,4,6,8;5;78;2;3;III;Rutenio;Óxido Rutenio;Óxido de Rutenio (III);Di;Tri;DiÓxido de TriRutenio
+79;Ru;Rutenio;Rutenoso;44;8;5;Metal;Metales de transición;Sólido;2,3,4,6,8;5;79;3;4;IV;Rutenio;Óxido Rutenio;Óxido de Rutenio (IV);Mono;Di;MonoÓxido de DiRutenio
+80;Ru;Rutenio;Rutenoso;44;8;5;Metal;Metales de transición;Sólido;2,3,4,6,8;5;80;4;6;VI;Rutenio;Óxido Rutenio;Óxido de Rutenio (VI);Mono;Tri;MonoÓxido de TriRutenio
+81;Ru;Rutenio;Rutenoso;44;8;5;Metal;Metales de transición;Sólido;2,3,4,6,8;5;81;5;8;VIII;Rutenio;Óxido Rutenio;Óxido de Rutenio (VIII);Mono;Tetra;MonoÓxido de TetraRutenio
+82;Rh;Rodio;Rodoso;45;9;5;Metal;Metales de transición;Sólido;2,3,4;3;82;1;2;II;Rodio;Óxido Rodio;Óxido de Rodio (II);Mono;Mono;MonoÓxido de MonoRodio
+83;Rh;Rodio;Rodoso;45;9;5;Metal;Metales de transición;Sólido;2,3,4;3;83;2;3;III;Rodio;Óxido Rodio;Óxido de Rodio (III);Di;Tri;DiÓxido de TriRodio
+84;Rh;Rodio;Ródico;45;9;5;Metal;Metales de transición;Sólido;2,3,4;3;84;3;4;IV;Rodio;Óxido Rodio;Óxido de Rodio (IV);Mono;Di;MonoÓxido de DiRodio
+85;Pd;Paladio;Paladoso;46;10;5;Metal;Metales de transición;Sólido;2,4;2;85;1;2;II;Paladio;Óxido Paladio;Óxido de Paladio (II);Mono;Mono;MonoÓxido de MonoPaladio
+86;Pd;Paladio;Paládico;46;10;5;Metal;Metales de transición;Sólido;2,4;2;86;2;4;IV;Paladio;Óxido Paladio;Óxido de Paladio (IV);Mono;Di;MonoÓxido de DiPaladio
+87;Ag;Plata;de Plata;47;11;5;Metal;Metales de transición;Sólido;1;1;87;1;1;I;Plata;Óxido Plata;Óxido de Plata (I);Di;Mono;DiÓxido de MonoPlata
+88;Cd;Cadmio;de Cadmio;48;12;5;Metal;Metales de transición;Sólido;2;1;88;1;2;II;Cadmio;Óxido Cadmio;Óxido de Cadmio (II);Mono;Mono;MonoÓxido de MonoCadmio
+89;In;Indio;de Indio;49;13;5;Metal;Metales del Bloque p;Sólido;3;1;89;1;3;III;Indio;Óxido Indio;Óxido de Indio (III);Di;Tri;DiÓxido de TriIndio
+90;Sn;Estaño;Estañoso;50;14;5;Metal;Metales del Bloque p;Sólido;2,4;2;90;1;2;II;Estaño;Óxido Estaño;Óxido de Estaño (II);Mono;Mono;MonoÓxido de MonoEstaño
+91;Sn;Estaño;Estáñico;50;14;5;Metal;Metales del Bloque p;Sólido;2,4;2;91;2;4;IV;Estaño;Óxido Estaño;Óxido de Estaño (IV);Mono;Di;MonoÓxido de DiEstaño
+92;Sb;Antimonio;Antimonoso;51;15;5;Metaloide;-;Sólido;3,5;2;92;1;3;III;Antimonio;Óxido Antimonio;Óxido de Antimonio (III);Di;Tri;DiÓxido de TriAntimonio
+93;Sb;Antimonio;Antimónico;51;15;5;Metaloide;-;Sólido;3,5;2;93;2;5;V;Antimonio;Óxido Antimonio;Óxido de Antimonio (V);Di;Penta;DiÓxido de PentaAntimonio
+94;Te;Telurio;Teluroso;52;16;5;Metaloide;-;Sólido;2,4,6;3;94;1;2;II;Telurio;Óxido Telurio;Óxido de Telurio (II);Mono;Mono;MonoÓxido de MonoTelurio
+95;Te;Telurio;Teluroso;52;16;5;Metaloide;-;Sólido;2,4,6;3;95;2;4;IV;Telurio;Óxido Telurio;Óxido de Telurio (IV);Mono;Di;MonoÓxido de DiTelurio
+96;Te;Telurio;Telúrico;52;16;5;Metaloide;-;Sólido;2,4,6;3;96;3;6;VI;Telurio;Óxido Telurio;Óxido de Telurio (VI);Mono;Tri;MonoÓxido de TriTelurio
+97;I;Yodo;Yodoso;53;17;5;No Metal;Halógenos;Sólido;1,5,7;3;97;1;1;I;Yodo;Óxido Yodo;Óxido de Yodo (I);Di;Mono;DiÓxido de MonoYodo
+98;I;Yodo;Yodoso;53;17;5;No Metal;Halógenos;Sólido;1,5,7;3;98;2;5;V;Yodo;Óxido Yodo;Óxido de Yodo (V);Di;Penta;DiÓxido de PentaYodo
+99;I;Yodo;Yódico;53;17;5;No Metal;Halógenos;Sólido;1,5,7;3;99;3;7;VII;Yodo;Óxido Yodo;Óxido de Yodo (VII);Di;Hepta;DiÓxido de HeptaYodo
+100;Xe;Xenón;----;54;18;5;Gas Noble;-;Gas;0;1;100;1;0;;----;----;----;----;----;----
+101;Cs;Cesio;de Cesio;55;1;6;Metal;Alcalino;Líquido;1;1;101;1;1;I;Cesio;Óxido Cesio;Óxido de Cesio (I);Di;Mono;DiÓxido de MonoCesio
+102;Ba;Bario;de Bario;56;2;6;Metal;Tierras alcalinas;Sólido;2;1;102;1;2;II;Bario;Óxido Bario;Óxido de Bario (II);Mono;Mono;MonoÓxido de MonoBario
+103;La;Lantano;de Lantano;57;3;6;Metal;Lantánidos;Sólido;3;1;103;1;3;III;Lantano;Óxido Lantano;Óxido de Lantano (III);Di;Tri;DiÓxido de TriLantano
+104;Ce;Cerio;Ceroso;58;3;6;Metal;Lantánidos;Sólido;3,4;2;104;1;3;III;Cerio;Óxido Cerio;Óxido de Cerio (III);Di;Tri;DiÓxido de TriCerio
+105;Ce;Cerio;Cérico;58;3;6;Metal;Lantánidos;Sólido;3,4;2;105;2;4;IV;Cerio;Óxido Cerio;Óxido de Cerio (IV);Mono;Di;MonoÓxido de DiCerio
+106;Pr;Praseodimio;Praseodimoso;59;3;6;Metal;Lantánidos;Sólido;3,4;2;106;1;3;III;Praseodimio;Óxido Praseodimio;Óxido de Praseodimio (III);Di;Tri;DiÓxido de TriPraseodimio
+107;Pr;Praseodimio;Praseodímico;59;3;6;Metal;Lantánidos;Sólido;3,4;2;107;2;4;IV;Praseodimio;Óxido Praseodimio;Óxido de Praseodimio (IV);Mono;Di;MonoÓxido de DiPraseodimio
+108;Nd;Neodimio;de Neodimio;60;3;6;Metal;Lantánidos;Sólido;3;1;108;1;3;III;Neodimio;Óxido Neodimio;Óxido de Neodimio (III);Di;Tri;DiÓxido de TriNeodimio
+109;Pm;Promesa;de Promesa;61;3;6;Metal;Lantánidos;Sólido;3;1;109;1;3;III;Promesa;Óxido Promesa;Óxido de Promesa (III);Di;Tri;DiÓxido de TriPromesa
+110;Sm;Samario;Samaroso;62;3;6;Metal;Lantánidos;Sólido;2,3;2;110;1;2;II;Samario;Óxido Samario;Óxido de Samario (II);Mono;Mono;MonoÓxido de MonoSamario
+111;Sm;Samario;Samárico;62;3;6;Metal;Lantánidos;Sólido;2,3;2;111;2;3;III;Samario;Óxido Samario;Óxido de Samario (III);Di;Tri;DiÓxido de TriSamario
+112;Eu;Europio;Europoso;63;3;6;Metal;Lantánidos;Sólido;2,3;2;112;1;2;II;Europio;Óxido Europio;Óxido de Europio (II);Mono;Mono;MonoÓxido de MonoEuropio
+113;Eu;Europio;Európico;63;3;6;Metal;Lantánidos;Sólido;2,3;2;113;2;3;III;Europio;Óxido Europio;Óxido de Europio (III);Di;Tri;DiÓxido de TriEuropio
+114;Gd;Gadolinio;de Gadolinio;64;3;6;Metal;Lantánidos;Sólido;3;1;114;1;3;III;Gadolinio;Óxido Gadolinio;Óxido de Gadolinio (III);Di;Tri;DiÓxido de TriGadolinio
+115;Tb;Terbio;Terboso;65;3;6;Metal;Lantánidos;Sólido;3,4;2;115;1;3;III;Terbio;Óxido Terbio;Óxido de Terbio (III);Di;Tri;DiÓxido de TriTerbio
+116;Tb;Terbio;Térbico;65;3;6;Metal;Lantánidos;Sólido;3,4;2;116;2;4;IV;Terbio;Óxido Terbio;Óxido de Terbio (IV);Mono;Di;MonoÓxido de DiTerbio
+117;Dy;Disprosio;de Disprosio;66;3;6;Metal;Lantánidos;Sólido;3;1;117;1;3;III;Disprosio;Óxido Disprosio;Óxido de Disprosio (III);Di;Tri;DiÓxido de TriDisprosio
+118;Ho;Holmio;de Holmio;67;3;6;Metal;Lantánidos;Sólido;3;1;118;1;3;III;Holmio;Óxido Holmio;Óxido de Holmio (III);Di;Tri;DiÓxido de TriHolmio
+119;Er;Erbio;de Erbio;68;3;6;Metal;Lantánidos;Sólido;3;1;119;1;3;III;Erbio;Óxido Erbio;Óxido de Erbio (III);Di;Tri;DiÓxido de TriErbio
+120;Tm;Tulio;Tuloso;69;3;6;Metal;Lantánidos;Sólido;3,2;2;120;2;3;III;Tulio;Óxido Tulio;Óxido de Tulio (III);Di;Tri;DiÓxido de TriTulio
+121;Tm;Tulio;Túlico;69;3;6;Metal;Lantánidos;Sólido;3,2;2;121;1;2;II;Tulio;Óxido Tulio;Óxido de Tulio (II);Mono;Mono;MonoÓxido de MonoTulio
+122;Yb;Iterbio;Iterboso;70;3;6;Metal;Lantánidos;Sólido;2,3;2;122;1;2;II;Iterbio;Óxido Iterbio;Óxido de Iterbio (II);Mono;Mono;MonoÓxido de MonoIterbio
+123;Yb;Iterbio;Itérbico;70;3;6;Metal;Lantánidos;Sólido;2,3;2;123;2;3;III;Iterbio;Óxido Iterbio;Óxido de Iterbio (III);Di;Tri;DiÓxido de TriIterbio
+124;Lu;Lutecio;de Lutecio;71;3;6;Metal;Lantánidos;Sólido;3;1;124;1;3;III;Lutecio;Óxido Lutecio;Óxido de Lutecio (III);Di;Tri;DiÓxido de TriLutecio
+125;Hf;Hafnio;de Hafnio;72;4;6;Metal;Lantánidos;Sólido;4;1;125;1;4;IV;Hafnio;Óxido Hafnio;Óxido de Hafnio (IV);Mono;Di;MonoÓxido de DiHafnio
+126;Ta;Tantalio;de Tantalio;73;5;6;Metal;Lantánidos;Sólido;5;1;126;1;5;V;Tantalio;Óxido Tantalio;Óxido de Tantalio (V);Di;Penta;DiÓxido de PentaTantalio
+127;W;Tungsteno;Tungstoso;74;6;6;Metal;Lantánidos;Sólido;2,3,4,5,6;5;127;1;2;II;Tungsteno;Óxido Tungsteno;Óxido de Tungsteno (II);Mono;Mono;MonoÓxido de MonoTungsteno
+128;W;Tungsteno;Tungstoso;74;6;6;Metal;Lantánidos;Sólido;2,3,4,5,6;5;128;2;3;III;Tungsteno;Óxido Tungsteno;Óxido de Tungsteno (III);Di;Tri;DiÓxido de TriTungsteno
+129;W;Tungsteno;Tungsténico;74;6;6;Metal;Lantánidos;Sólido;2,3,4,5,6;5;129;3;4;IV;Tungsteno;Óxido Tungsteno;Óxido de Tungsteno (IV);Mono;Di;MonoÓxido de DiTungsteno
+130;W;Tungsteno;Tungsténico;74;6;6;Metal;Lantánidos;Sólido;2,3,4,5,6;5;130;4;5;V;Tungsteno;Óxido Tungsteno;Óxido de Tungsteno (V);Di;Penta;DiÓxido de PentaTungsteno
+131;W;Tungsteno;Tungsténico;74;6;6;Metal;Lantánidos;Sólido;2,3,4,5,6;5;131;5;6;VI;Tungsteno;Óxido Tungsteno;Óxido de Tungsteno (VI);Mono;Tri;MonoÓxido de TriTungsteno
+132;Re;Renio;Renoso;75;7;6;Metal;Lantánidos;Sólido;1,2,4,6,7;5;132;1;1;I;Renio;Óxido Renio;Óxido de Renio (I);Di;Mono;DiÓxido de MonoRenio
+133;Re;Renio;Renoso;75;7;6;Metal;Lantánidos;Sólido;1,2,4,6,7;5;133;2;2;II;Renio;Óxido Renio;Óxido de Renio (II);Mono;Mono;MonoÓxido de MonoRenio
+134;Re;Renio;Renico;75;7;6;Metal;Lantánidos;Sólido;1,2,4,6,7;5;134;3;4;IV;Renio;Óxido Renio;Óxido de Renio (IV);Mono;Di;MonoÓxido de DiRenio
+135;Re;Renio;Renico;75;7;6;Metal;Lantánidos;Sólido;1,2,4,6,7;5;135;4;6;VI;Renio;Óxido Renio;Óxido de Renio (VI);Mono;Tri;MonoÓxido de TriRenio
+136;Re;Renio;Renico;75;7;6;Metal;Lantánidos;Sólido;1,2,4,6,7;5;136;5;7;VII;Renio;Óxido Renio;Óxido de Renio (VII);Di;Hepta;DiÓxido de HeptaRenio
+137;Os;Osmio;Osmoso;76;8;6;Metal;Lantánidos;Sólido;2,3,4,6,8;5;137;1;2;II;Osmio;Óxido Osmio;Óxido de Osmio (II);Mono;Mono;MonoÓxido de MonoOsmio
+138;Os;Osmio;Osmoso;76;8;6;Metal;Lantánidos;Sólido;2,3,4,6,8;5;138;2;3;III;Osmio;Óxido Osmio;Óxido de Osmio (III);Di;Tri;DiÓxido de TriOsmio
+139;Os;Osmio;Ósmico;76;8;6;Metal;Lantánidos;Sólido;2,3,4,6,8;5;139;3;4;IV;Osmio;Óxido Osmio;Óxido de Osmio (IV);Mono;Di;MonoÓxido de DiOsmio
+140;Os;Osmio;Ósmico;76;8;6;Metal;Lantánidos;Sólido;2,3,4,6,8;5;140;4;6;VI;Osmio;Óxido Osmio;Óxido de Osmio (VI);Mono;Tri;MonoÓxido de TriOsmio
+141;Os;Osmio;Ósmico;76;8;6;Metal;Lantánidos;Sólido;2,3,4,6,8;5;141;5;8;VIII;Osmio;Óxido Osmio;Óxido de Osmio (VIII);Mono;Tetra;MonoÓxido de TetraOsmio
+142;Ir;Iridio;Iridoso;77;9;6;Metal;Lantánidos;Sólido;2,3,4,6;4;142;1;2;II;Iridio;Óxido Iridio;Óxido de Iridio (II);Mono;Mono;MonoÓxido de MonoIridio
+143;Ir;Iridio;Iridoso;77;9;6;Metal;Lantánidos;Sólido;2,3,4,6;4;143;2;3;III;Iridio;Óxido Iridio;Óxido de Iridio (III);Di;Tri;DiÓxido de TriIridio
+144;Ir;Iridio;Irídico;77;9;6;Metal;Lantánidos;Sólido;2,3,4,6;4;144;3;4;IV;Iridio;Óxido Iridio;Óxido de Iridio (IV);Mono;Di;MonoÓxido de DiIridio
+145;Ir;Iridio;Irídico;77;9;6;Metal;Lantánidos;Sólido;2,3,4,6;4;145;4;6;VI;Iridio;Óxido Iridio;Óxido de Iridio (VI);Mono;Tri;MonoÓxido de TriIridio
+146;Pt;Platino;Platinoso;78;10;6;Metal;Lantánidos;Sólido;2,4;2;146;1;2;II;Platino;Óxido Platino;Óxido de Platino (II);Mono;Mono;MonoÓxido de MonoPlatino
+147;Pt;Platino;Platínico;78;10;6;Metal;Lantánidos;Sólido;2,4;2;147;2;4;IV;Platino;Óxido Platino;Óxido de Platino (IV);Mono;Di;MonoÓxido de DiPlatino
+148;Au;Oro;Auroso;79;11;6;Metal;Lantánidos;Sólido;1,3;2;148;1;1;I;Oro;Óxido Oro;Óxido de Oro (I);Di;Mono;DiÓxido de MonoOro
+149;Au;Oro;Áurico;79;11;6;Metal;Lantánidos;Sólido;1,3;2;149;2;3;III;Oro;Óxido Oro;Óxido de Oro (III);Di;Tri;DiÓxido de TriOro
+150;Hg;Mercurio;Mercuroso;80;12;6;Metal;Lantánidos;Líquido;1,2;2;150;1;1;I;Mercurio;Óxido Mercurio;Óxido de Mercurio (I);Di;Mono;DiÓxido de MonoMercurio
+151;Hg;Mercurio;Mercúrico;80;12;6;Metal;Lantánidos;Líquido;1,2;2;151;2;2;II;Mercurio;Óxido Mercurio;Óxido de Mercurio (II);Mono;Mono;MonoÓxido de MonoMercurio
+152;Tl;Talio;Taloso;81;13;6;Metal;Lantánidos;Sólido;1,3;2;152;1;1;I;Talio;Óxido Talio;Óxido de Talio (I);Di;Mono;DiÓxido de MonoTalio
+153;Tl;Talio;Tálico;81;13;6;Metal;Lantánidos;Sólido;1,3;2;153;2;3;III;Talio;Óxido Talio;Óxido de Talio (III);Di;Tri;DiÓxido de TriTalio
+154;Pb;Plomo;Plomboso;82;14;6;Metal;Lantánidos;Sólido;2,4;2;154;1;2;II;Dirigir;Óxido Dirigir;Óxido de Dirigir (II);Mono;Mono;MonoÓxido de MonoDirigir
+155;Pb;Plomo;Plúmbico;82;14;6;Metal;Lantánidos;Sólido;2,4;2;155;2;4;IV;Dirigir;Óxido Dirigir;Óxido de Dirigir (IV);Mono;Di;MonoÓxido de DiDirigir
+156;Bi;Bismuto;Bismutoso;83;15;6;Metal;Lantánidos;Sólido;3,5;2;156;1;3;III;Bismuto;Óxido Bismuto;Óxido de Bismuto (III);Di;Tri;DiÓxido de TriBismuto
+157;Bi;Bismuto;Bismútico;83;15;6;Metal;Lantánidos;Sólido;3,5;2;157;2;5;V;Bismuto;Óxido Bismuto;Óxido de Bismuto (V);Di;Penta;DiÓxido de PentaBismuto
+158;Po;Polonio;Polonoso;84;16;6;Metaloide;-;Sólido;2,4;2;158;1;2;II;Polonio;Óxido Polonio;Óxido de Polonio (II);Mono;Mono;MonoÓxido de MonoPolonio
+159;Po;Polonio;Polónico;84;16;6;Metaloide;-;Sólido;2,4;2;159;2;4;IV;Polonio;Óxido Polonio;Óxido de Polonio (IV);Mono;Di;MonoÓxido de DiPolonio
+160;At;Aestado;Aestoso;85;17;6;No Metal;Halógenos;Sólido;1,3,5,7;4;160;1;1;I;Aestado;Óxido Aestado;Óxido de Aestado (I);Di;Mono;DiÓxido de MonoAestado
+161;At;Aestado;Aestoso;85;17;6;No Metal;Halógenos;Sólido;1,3,5,7;4;161;2;3;III;Aestado;Óxido Aestado;Óxido de Aestado (III);Di;Tri;DiÓxido de TriAestado
+162;At;Aestado;Aestédico;85;17;6;No Metal;Halógenos;Sólido;1,3,5,7;4;162;3;5;V;Aestado;Óxido Aestado;Óxido de Aestado (V);Di;Penta;DiÓxido de PentaAestado
+163;At;Aestado;Aestédico;85;17;6;No Metal;Halógenos;Sólido;1,3,5,7;4;163;4;7;VII;Aestado;Óxido Aestado;Óxido de Aestado (VII);Di;Hepta;DiÓxido de HeptaAestado
+164;Rn;Radón;----;86;18;6;Gas Noble;-;Gas;0;1;164;1;0;;----;----;----;----;----;----
+165;Fr;Francisco;de Francisco;87;1;7;Metal;Alcalino;Líquido;1;1;165;1;1;I;Francisco;Óxido Francisco;Óxido de Francisco (I);Di;Mono;DiÓxido de MonoFrancisco
+166;Ra;Radio;de Radio;88;2;7;Metal;Tierras alcalinas;Sólido;2;1;166;1;2;II;Radio;Óxido Radio;Óxido de Radio (II);Mono;Mono;MonoÓxido de MonoRadio
+167;Ac;Actinio;de Actinio;89;3;7;Metal;Actínidos;Sólido;3;1;167;1;3;III;Actinio;Óxido Actinio;Óxido de Actinio (III);Di;Tri;DiÓxido de TriActinio
+168;Th;Torio;de Torio;90;3;7;Metal;Actínidos;Sólido;4;1;168;1;4;IV;Torio;Óxido Torio;Óxido de Torio (IV);Mono;Di;MonoÓxido de DiTorio
+169;Pa;Protactinio;Protactinoso;91;3;7;Metal;Actínidos;Sólido;4,5;2;169;1;4;IV;Protactinio;Óxido Protactinio;Óxido de Protactinio (IV);Mono;Di;MonoÓxido de DiProtactinio
+170;Pa;Protactinio;Protactínico;91;3;7;Metal;Actínidos;Sólido;4,5;2;170;2;5;V;Protactinio;Óxido Protactinio;Óxido de Protactinio (V);Di;Penta;DiÓxido de PentaProtactinio
+171;U;Uranio;Uranoso;92;3;7;Metal;Actínidos;Sólido;3,4,5,6;4;171;1;3;III;Uranio;Óxido Uranio;Óxido de Uranio (III);Di;Tri;DiÓxido de TriUranio
+172;U;Uranio;Uranoso;92;3;7;Metal;Actínidos;Sólido;3,4,5,6;4;172;2;4;IV;Uranio;Óxido Uranio;Óxido de Uranio (IV);Mono;Di;MonoÓxido de DiUranio
+173;U;Uranio;Uránico;92;3;7;Metal;Actínidos;Sólido;3,4,5,6;4;173;3;5;V;Uranio;Óxido Uranio;Óxido de Uranio (V);Di;Penta;DiÓxido de PentaUranio
+174;U;Uranio;Uránico;92;3;7;Metal;Actínidos;Sólido;3,4,5,6;4;174;4;6;VI;Uranio;Óxido Uranio;Óxido de Uranio (VI);Mono;Tri;MonoÓxido de TriUranio
+175;Np;Neptunio;Neptunoso;93;3;7;Metal;Actínidos;???;3,4,5,6;4;175;1;3;III;Neptunio;Óxido Neptunio;Óxido de Neptunio (III);Di;Tri;DiÓxido de TriNeptunio
+176;Np;Neptunio;Neptunoso;93;3;7;Metal;Actínidos;???;3,4,5,6;4;176;2;4;IV;Neptunio;Óxido Neptunio;Óxido de Neptunio (IV);Mono;Di;MonoÓxido de DiNeptunio
+177;Np;Neptunio;Neptúnico;93;3;7;Metal;Actínidos;???;3,4,5,6;4;177;3;5;V;Neptunio;Óxido Neptunio;Óxido de Neptunio (V);Di;Penta;DiÓxido de PentaNeptunio
+178;Np;Neptunio;Neptúnico;93;3;7;Metal;Actínidos;???;3,4,5,6;4;178;4;6;VI;Neptunio;Óxido Neptunio;Óxido de Neptunio (VI);Mono;Tri;MonoÓxido de TriNeptunio
+179;Pu;Plutonio;Plutonoso;94;3;7;Metal;Actínidos;???;3,4,5,6;4;179;1;3;III;Plutonio;Óxido Plutonio;Óxido de Plutonio (III);Di;Tri;DiÓxido de TriPlutonio
+180;Pu;Plutonio;Plutonoso;94;3;7;Metal;Actínidos;???;3,4,5,6;4;180;2;4;IV;Plutonio;Óxido Plutonio;Óxido de Plutonio (IV);Mono;Di;MonoÓxido de DiPlutonio
+181;Pu;Plutonio;Plutónico;94;3;7;Metal;Actínidos;???;3,4,5,6;4;181;3;5;V;Plutonio;Óxido Plutonio;Óxido de Plutonio (V);Di;Penta;DiÓxido de PentaPlutonio
+182;Pu;Plutonio;Plutónico;94;3;7;Metal;Actínidos;???;3,4,5,6;4;182;4;6;VI;Plutonio;Óxido Plutonio;Óxido de Plutonio (VI);Mono;Tri;MonoÓxido de TriPlutonio
+183;Am;Americio;Americoso;95;3;7;Metal;Actínidos;???;3,4,5,6;4;183;1;3;III;Americio;Óxido Americio;Óxido de Americio (III);Di;Tri;DiÓxido de TriAmericio
+184;Am;Americio;Americoso;95;3;7;Metal;Actínidos;???;3,4,5,6;4;184;2;4;IV;Americio;Óxido Americio;Óxido de Americio (IV);Mono;Di;MonoÓxido de DiAmericio
+185;Am;Americio;Américo;95;3;7;Metal;Actínidos;???;3,4,5,6;4;185;3;5;V;Americio;Óxido Americio;Óxido de Americio (V);Di;Penta;DiÓxido de PentaAmericio
+186;Am;Americio;Américo;95;3;7;Metal;Actínidos;???;3,4,5,6;4;186;4;6;VI;Americio;Óxido Americio;Óxido de Americio (VI);Mono;Tri;MonoÓxido de TriAmericio
+187;Cm;Curio;de Curio;96;3;7;Metal;Actínidos;???;3;1;187;1;3;III;Curio;Óxido Curio;Óxido de Curio (III);Di;Tri;DiÓxido de TriCurio
+188;Bk;Berkelio;Berkeloso;97;3;7;Metal;Actínidos;???;3,4;2;188;1;3;III;Berkelio;Óxido Berkelio;Óxido de Berkelio (III);Di;Tri;DiÓxido de TriBerkelio
+189;Bk;Berkelio;Berkélico;97;3;7;Metal;Actínidos;???;3,4;2;189;2;4;IV;Berkelio;Óxido Berkelio;Óxido de Berkelio (IV);Mono;Di;MonoÓxido de DiBerkelio
+190;Cf;Californio;de Californio;98;3;7;Metal;Actínidos;???;3;1;190;1;3;III;Californio;Óxido Californio;Óxido de Californio (III);Di;Tri;DiÓxido de TriCalifornio
+191;Es;Einstenio;de Einstenio;99;3;7;Metal;Actínidos;???;4;1;191;1;4;IV;Einstenio;Óxido Einstenio;Óxido de Einstenio (IV);Mono;Di;MonoÓxido de DiEinstenio
+192;Fm;Fermio;de Fermio;100;3;7;Metal;Actínidos;???;4;1;192;1;4;IV;Fermio;Óxido Fermio;Óxido de Fermio (IV);Mono;Di;MonoÓxido de DiFermio
+193;Md;Mendelevio;Mendelevoso;101;3;7;Metal;Actínidos;???;3,4;2;193;1;3;III;Mendelevio;Óxido Mendelevio;Óxido de Mendelevio (III);Di;Tri;DiÓxido de TriMendelevio
+194;Md;Mendelevio;Mendelévico;101;3;7;Metal;Actínidos;???;3,4;2;194;2;4;IV;Mendelevio;Óxido Mendelevio;Óxido de Mendelevio (IV);Mono;Di;MonoÓxido de DiMendelevio
+195;No;Nobel;Nobeloso;102;3;7;Metal;Actínidos;???;3,4;2;195;1;3;III;Nobel;Óxido Nobel;Óxido de Nobel (III);Di;Tri;DiÓxido de TriNobel
+196;No;Nobel;Nobélico;102;3;7;Metal;Actínidos;???;3,4;2;196;2;4;IV;Nobel;Óxido Nobel;Óxido de Nobel (IV);Mono;Di;MonoÓxido de DiNobel
+197;Lr;Laurencio;Lauroso;103;3;7;Metal;Actínidos;???;3,4;2;197;1;3;III;Laurencio;Óxido Laurencio;Óxido de Laurencio (III);Di;Tri;DiÓxido de TriLaurencio
+198;Lr;Laurencio;Láurico;103;3;7;Metal;Actínidos;???;3,4;2;198;2;4;IV;Laurencio;Óxido Laurencio;Óxido de Laurencio (IV);Mono;Di;MonoÓxido de DiLaurencio
+199;Rf;Rutherfordio;de Rutherfordio;104;3;7;Metal;Actínidos;???;4;1;199;1;4;IV;Rutherfordio;Óxido Rutherfordio;Óxido de Rutherfordio (IV);Mono;Di;MonoÓxido de DiRutherfordio
+200;Db;Dubnio;de Dubnio;105;3;7;Metal;Actínidos;???;4;1;200;1;4;IV;Dubnio;Óxido Dubnio;Óxido de Dubnio (IV);Mono;Di;MonoÓxido de DiDubnio
+201;Sg;Seaborgio;de Seaborgio;106;3;7;Metal;Actínidos;???;4;1;201;1;4;IV;Seaborgio;Óxido Seaborgio;Óxido de Seaborgio (IV);Mono;Di;MonoÓxido de DiSeaborgio
+202;Bh;Bohrio;Bohroso;107;3;7;Metal;Actínidos;???;3,4,5;3;202;1;3;III;Bohrio;Óxido Bohrio;Óxido de Bohrio (III);Di;Tri;DiÓxido de TriBohrio
+203;Bh;Bohrio;Bohroso;107;3;7;Metal;Actínidos;???;3,4,5;3;203;2;4;IV;Bohrio;Óxido Bohrio;Óxido de Bohrio (IV);Mono;Di;MonoÓxido de DiBohrio
+204;Bh;Bohrio;Bohrioico;107;3;7;Metal;Actínidos;???;3,4,5;3;204;3;5;V;Bohrio;Óxido Bohrio;Óxido de Bohrio (V);Di;Penta;DiÓxido de PentaBohrio
+205;Hs;Hassio;Hassoso;108;3;7;Metal;Actínidos;???;2,4,6,7;4;205;1;2;II;Hassio;Óxido Hassio;Óxido de Hassio (II);Mono;Mono;MonoÓxido de MonoHassio
+206;Hs;Hassio;Hassoso;108;3;7;Metal;Actínidos;???;2,4,6,7;4;206;2;4;IV;Hassio;Óxido Hassio;Óxido de Hassio (IV);Mono;Di;MonoÓxido de DiHassio
+207;Hs;Hassio;Hassico;108;3;7;Metal;Actínidos;???;2,4,6,7;4;207;3;6;VI;Hassio;Óxido Hassio;Óxido de Hassio (VI);Mono;Tri;MonoÓxido de TriHassio
+208;Hs;Hassio;Hassico;108;3;7;Metal;Actínidos;???;2,4,6,7;4;208;4;7;VII;Hassio;Óxido Hassio;Óxido de Hassio (VII);Di;Hepta;DiÓxido de HeptaHassio
+209;Mt;Meitnerio;Meitneroso;109;3;7;Metal;Actínidos;???;2,3,4,6;4;209;1;2;II;Meitnerio;Óxido Meitnerio;Óxido de Meitnerio (II);Mono;Mono;MonoÓxido de MonoMeitnerio
+210;Mt;Meitnerio;Meitneroso;109;3;7;Metal;Actínidos;???;2,3,4,6;4;210;2;3;III;Meitnerio;Óxido Meitnerio;Óxido de Meitnerio (III);Di;Tri;DiÓxido de TriMeitnerio
+211;Mt;Meitnerio;Meitnérico;109;3;7;Metal;Actínidos;???;2,3,4,6;4;211;3;4;IV;Meitnerio;Óxido Meitnerio;Óxido de Meitnerio (IV);Mono;Di;MonoÓxido de DiMeitnerio
+212;Mt;Meitnerio;Meitnérico;109;3;7;Metal;Actínidos;???;2,3,4,6;4;212;4;6;VI;Meitnerio;Óxido Meitnerio;Óxido de Meitnerio (VI);Mono;Tri;MonoÓxido de TriMeitnerio
+213;Ds;Darmstadtio;Darmstadtoso;110;3;7;Metal;Actínidos;???;2,4;2;213;1;2;II;Darmstadtio;Óxido Darmstadtio;Óxido de Darmstadtio (II);Mono;Mono;MonoÓxido de MonoDarmstadtio
+214;Ds;Darmstadtio;Darmstadtico;110;3;7;Metal;Actínidos;???;2,4;2;214;2;4;IV;Darmstadtio;Óxido Darmstadtio;Óxido de Darmstadtio (IV);Mono;Di;MonoÓxido de DiDarmstadtio
+215;Rg;Roentgenio;Roentgenoso;111;3;7;Metal;Actínidos;???;2,3;2;215;1;2;II;Roentgenio;Óxido Roentgenio;Óxido de Roentgenio (II);Mono;Mono;MonoÓxido de MonoRoentgenio
+216;Rg;Roentgenio;Roentgénico;111;3;7;Metal;Actínidos;???;2,3;2;216;2;3;III;Roentgenio;Óxido Roentgenio;Óxido de Roentgenio (III);Di;Tri;DiÓxido de TriRoentgenio
+217;Cn;Copérnico;Copernicoso;112;3;7;Metal;Actínidos;???;1,2;2;217;1;1;I;Copérnico;Óxido Copérnico;Óxido de Copérnico (I);Di;Mono;DiÓxido de MonoCopérnico
+218;Cn;Copérnico;Copérnico;112;3;7;Metal;Actínidos;???;1,2;2;218;2;2;II;Copérnico;Óxido Copérnico;Óxido de Copérnico (II);Mono;Mono;MonoÓxido de MonoCopérnico
+219;Nh;Nihonio;de Nihonio;113;3;7;Metal;Actínidos;???;3;1;219;1;3;III;Nihonio;Óxido Nihonio;Óxido de Nihonio (III);Di;Tri;DiÓxido de TriNihonio
+220;Fl;Flerovio;Flerovoso;114;3;7;Metal;Actínidos;???;2,4,6;3;220;1;2;II;Flerovio;Óxido Flerovio;Óxido de Flerovio (II);Mono;Mono;MonoÓxido de MonoFlerovio
+221;Fl;Flerovio;Flerovoso;114;3;7;Metal;Actínidos;???;2,4,6;3;221;2;4;IV;Flerovio;Óxido Flerovio;Óxido de Flerovio (IV);Mono;Di;MonoÓxido de DiFlerovio
+222;Fl;Flerovio;Fleróvico;114;3;7;Metal;Actínidos;???;2,4,6;3;222;3;6;VI;Flerovio;Óxido Flerovio;Óxido de Flerovio (VI);Mono;Tri;MonoÓxido de TriFlerovio
+223;Mc;Moscovio;Moscovioso;115;3;7;Metal;Actínidos;???;1,4,5;3;223;1;1;I;Moscovio;Óxido Moscovio;Óxido de Moscovio (I);Di;Mono;DiÓxido de MonoMoscovio
+224;Mc;Moscovio;Moscovioso;115;3;7;Metal;Actínidos;???;1,4,5;3;224;2;4;IV;Moscovio;Óxido Moscovio;Óxido de Moscovio (IV);Mono;Di;MonoÓxido de DiMoscovio
+225;Mc;Moscovio;Moscóvico;115;3;7;Metal;Actínidos;???;1,4,5;3;225;3;5;V;Moscovio;Óxido Moscovio;Óxido de Moscovio (V);Di;Penta;DiÓxido de PentaMoscovio
+226;Lv;Livermorio;Livermoroso;116;3;7;Metal;Actínidos;???;3,4,5;3;226;1;3;III;Livermorio;Óxido Livermorio;Óxido de Livermorio (III);Di;Tri;DiÓxido de TriLivermorio
+227;Lv;Livermorio;Livermoroso;116;3;7;Metal;Actínidos;???;3,4,5;3;227;2;4;IV;Livermorio;Óxido Livermorio;Óxido de Livermorio (IV);Mono;Di;MonoÓxido de DiLivermorio
+228;Lv;Livermorio;Livermórico;116;3;7;Metal;Actínidos;???;3,4,5;3;228;3;5;V;Livermorio;Óxido Livermorio;Óxido de Livermorio (V);Di;Penta;DiÓxido de PentaLivermorio
+229;Ts;Tenesino;Tenesoso;117;3;7;Metal;Actínidos;???;1,2,3;3;229;1;1;I;Tenesino;Óxido Tenesino;Óxido de Tenesino (I);Di;Mono;DiÓxido de MonoTenesino
+230;Ts;Tenesino;Tenesoso;117;3;7;Metal;Actínidos;???;1,2,3;3;230;2;2;II;Tenesino;Óxido Tenesino;Óxido de Tenesino (II);Mono;Mono;MonoÓxido de MonoTenesino
+231;Ts;Tenesino;Tenésico;117;3;7;Metal;Actínidos;???;1,2,3;3;231;3;3;III;Tenesino;Óxido Tenesino;Óxido de Tenesino (III);Di;Tri;DiÓxido de TriTenesino
+232;Og;Oganesón;Oganoso;118;3;7;Metal;Actínidos;???;4,7;2;232;1;4;IV;Oganesón;Óxido Oganesón;Óxido de Oganesón (IV);Mono;Di;MonoÓxido de DiOganesón
+233;Og;Oganesón;Oganésico;118;3;7;Metal;Actínidos;???;4,7;2;233;2;7;VII;Oganesón;Óxido Oganesón;Óxido de Oganesón (VII);Di;Hepta;DiÓxido de HeptaOganesón

@@ -11,11 +11,14 @@
 #' Resolution_Oxyde(chem_symbol = "H",
 #'                  element_valence = 1,
 #'                  gas_status_element = TRUE)
-Resolution_Oxyde <- function(chem_symbol, element_valence, gas_status_element){
+Resolution_Oxyde <- function(chem_symbol,
+                             element_valence,
+                             gas_status_element,
+                             language){
 
 
-  # chem_symbol <- "H"
-  # element_valence <- 1
+  # chem_symbol <- "Fe"
+  # element_valence <- 2
   # gas_status_element <- TRUE
 
 
@@ -97,7 +100,7 @@ Resolution_Oxyde <- function(chem_symbol, element_valence, gas_status_element){
 
 
   output[[7]] <- output[[3]]$Oxyde[nrow(output[[3]])]
-  names(output)[7] <- "ChemFormule"
+  names(output)[7] <- "ChemFormule_pure"
 
 
   #######################################################
@@ -142,6 +145,15 @@ Resolution_Oxyde <- function(chem_symbol, element_valence, gas_status_element){
 
   colnames( output[[8]]) <- c("Steps", "General", "Particular")
   names(output)[8] <- "format02_oxyde"
+
+
+  #####################################################
+  output[[9]] <- Nomenclature_Oxyde(chem_symbol,
+                               element_valence,
+                               gas_status_element,
+                               language)
+
+  names(output)[9] <- "Nomenclature_Oxyde"
 
   #######################################################
   # Final Return

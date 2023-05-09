@@ -1,10 +1,8 @@
-#' Pack 04 - Oxyde
+#' ExtraDataTC 04 - Oxyde
 #'
-#'It is a data.frame in which each row of the database is a chemical
-#'element, and columns with information have been added to perform data
-#'filtering.
+#' Need a more description!.
 #'
-#' @format ## `PackTC_04_Oxyde`
+#' @format ## `ExtraDataTC_04_Oxyde`
 #' A data frame with 118 rows and 24 columns:
 #' \describe{
 #'   \item{country}{Country name}
@@ -13,4 +11,4 @@
 #'   ...
 #' }
 #' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
-"PackTC_04_Oxyde"
+"ExtraDataTC_04_Oxyde"

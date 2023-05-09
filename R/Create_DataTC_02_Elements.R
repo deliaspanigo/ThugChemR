@@ -14,17 +14,23 @@
 #' if(FALSE) Create_DataTC_02_Elements()
 Create_DataTC_02_Elements <- function(){
 
-  input_obj_name <-  "DataTC_01_PeriodicTable_eng"
-  input_folder <- "./data-raw/OriginalData/"
-  input_file <- paste0(input_obj_name, ".csv")
-  input_path <- paste0(input_folder, input_file)
+  # input_obj_name <-  "DataTC_01_PeriodicTable_eng"
+  # input_folder <- "./data-raw/OriginalData/"
+  # input_file <- paste0(input_obj_name, ".csv")
+  # input_path <- paste0(input_folder, input_file)
 
   output_obj_name <-  "DataTC_02_Elements"
-  output_folder <- "./data-raw/"
-  output_file <- paste0(output_obj_name, ".csv")
+  output_folder <- "./data-raw/Output/"
+
+  all_languages <- names(ThugChemR::DataTC_01_PeriodicTable)
+
+  output_file <- paste0(output_obj_name,"_", all_languages,".csv")
   output_path <- paste0(output_folder, output_file)
 
-  data_input <- utils::read.csv(file = input_path, sep = ";", dec=".")
+
+  # data_input <- utils::read.csv(file = input_path, sep = ";", dec=".")
+  # data_input <- ThugCHemR::DataTC_01_PeriodicTable[["en"]]
+  data_input <- ThugChemR::DataTC_01_PeriodicTable[["eng"]]
 
   new_columns <- list()
 
@@ -43,19 +49,44 @@ Create_DataTC_02_Elements <- function(){
   columns_pack <- do.call(cbind.data.frame, new_columns)
 
 
-  data_output <- cbind.data.frame(data_input, columns_pack)
+  data_output <- sapply(all_languages, function(x){
+
+
+
+    the_output <- cbind.data.frame(ThugChemR::DataTC_01_PeriodicTable[[x]],
+                     columns_pack)
+
+    return(the_output)
+
+  }, simplify = F, USE.NAMES = T)
+
 
   assign(output_obj_name, data_output)
-
-
-  # readr::write_csv(x = data_output,file = output_path, )
-  utils::write.table(x = data_output, file = output_path, dec = ".",
-                     sep = ";", col.names = T, row.names = F)
-
   gen_sentence <- "usethis::use_data(_ObjName_, overwrite = TRUE)"
   the_sentence <- gsub("_ObjName_", output_obj_name, gen_sentence)
-
   eval(parse(text = the_sentence))
+
+  # Save Each Table as .csv file
+  for(x in 1:length(all_languages)){
+
+    selected_output_path <- output_path[x]
+    selected_language <- all_languages[x]
+
+    # readr::write_csv(x = data_output,file = output_path, )
+    # utils::write.table(x = data_output[[selected_language]],
+    #                    file = selected_output_path,
+    #                    dec = ".",
+    #                    sep = ";", col.names = T, row.names = F,
+    #                    fileEncoding = "UTF-8")
+
+
+    readr::write_excel_csv(x = data_output[[selected_language]],
+                           file = selected_output_path,
+                           col_names = T,
+                           delim = ";")
+  }
+
+
 
 }
 
