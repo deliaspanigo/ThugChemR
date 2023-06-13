@@ -15,9 +15,11 @@ LazyData: true
 Imports: 
     colourpicker,
     FRACTION,
+    graphics,
     latex2exp,
     readr,
     shiny,
     shinydashboard,
+    stats,
     stringr,
     usethis

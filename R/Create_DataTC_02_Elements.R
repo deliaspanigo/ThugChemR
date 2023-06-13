@@ -14,15 +14,18 @@
 #' if(FALSE) Create_DataTC_02_Elements()
 Create_DataTC_02_Elements <- function(){
 
-  # input_obj_name <-  "DataTC_01_PeriodicTable_eng"
-  # input_folder <- "./data-raw/OriginalData/"
-  # input_file <- paste0(input_obj_name, ".csv")
-  # input_path <- paste0(input_folder, input_file)
+  input_obj_name <-  "DataTC_01_PeriodicTable"
+  input_folder <- "./data/"
+  input_file <- paste0(input_obj_name, ".rda")
+  input_path <- paste0(input_folder, input_file)
+
+  # Importamos el objeto "DataTC_01_PeriodicTable"
+ load(input_path)
 
   output_obj_name <-  "DataTC_02_Elements"
   output_folder <- "./data-raw/Output/"
 
-  all_languages <- names(ThugChemR::DataTC_01_PeriodicTable)
+  all_languages <- names(DataTC_01_PeriodicTable)
 
   output_file <- paste0(output_obj_name,"_", all_languages,".csv")
   output_path <- paste0(output_folder, output_file)
@@ -30,7 +33,7 @@ Create_DataTC_02_Elements <- function(){
 
   # data_input <- utils::read.csv(file = input_path, sep = ";", dec=".")
   # data_input <- ThugCHemR::DataTC_01_PeriodicTable[["en"]]
-  data_input <- ThugChemR::DataTC_01_PeriodicTable[["eng"]]
+  data_input <- DataTC_01_PeriodicTable[["eng"]]
 
   new_columns <- list()
 
@@ -46,15 +49,21 @@ Create_DataTC_02_Elements <- function(){
   new_columns[["Subtype_Halogen"]] <- data_input$Subtype == "Halogens"
 
 
+
+
   columns_pack <- do.call(cbind.data.frame, new_columns)
 
 
   data_output <- sapply(all_languages, function(x){
 
+    ### x <- all_languages[1]
 
+    ElementSelector01 <- paste0(stringr::str_pad(DataTC_01_PeriodicTable[[x]]$Order, 3, "left"), " - ",
+                                stringr::str_pad(DataTC_01_PeriodicTable[[x]]$Symbol, 2, "right"), " - ",
+                                        DataTC_01_PeriodicTable[[x]]$Name)
 
-    the_output <- cbind.data.frame(ThugChemR::DataTC_01_PeriodicTable[[x]],
-                     columns_pack)
+    the_output <- cbind.data.frame(DataTC_01_PeriodicTable[[x]],
+                     columns_pack, ElementSelector01)
 
     return(the_output)
 

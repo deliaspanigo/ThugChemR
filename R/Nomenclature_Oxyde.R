@@ -17,6 +17,14 @@ Nomenclature_Oxyde <- function(chem_symbol,
                              language){
 
 
+  input_obj_name <-  "DataTC_04_Oxyde"
+  input_folder <- "./data/"
+  input_file <- paste0(input_obj_name, ".rda")
+  input_path <- paste0(input_folder, input_file)
+
+  # Importamos el objeto "DataTC_01_PeriodicTable"
+  load(input_path)
+
   # chem_symbol <- "Fe"
   # element_valence <- 2
   # gas_status_element <- TRUE

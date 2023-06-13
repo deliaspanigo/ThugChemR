@@ -13,11 +13,53 @@
 #' if(FALSE) Create_DataTC_04_Oxyde()
 Create_DataTC_04_Oxyde <- function(){
 
+  # Input 01 y 02
+  input_obj_name01 <-  "DataTC_02_Elements"
+  input_obj_name02 <-  "DataTC_03_Valences"
+
+  input_folder <- "./data/"
+
+  input_file01 <- paste0(input_obj_name01, ".rda")
+  input_file02 <- paste0(input_obj_name02, ".rda")
+
+  input_path01 <- paste0(input_folder, input_file01)
+  input_path02 <- paste0(input_folder, input_file02)
+
+  # Importamos el objeto "DataTC_02_Elements" y "DataTC_03_Valences"
+  load(input_path01)
+  load(input_path02)
+  # # # # # # # # # # # # # # #
+
+  # Input 03
+  input_obj_name03 <-  "ExtraDataTC_04_Oxyde"
+  input_folder03 <- "./data-raw/ExtraData/"
+  input_file03 <- list.files(input_folder03)
+  input_path03 <- paste0(input_folder03, input_file03)
+
+
+  ExtraDataTC_04_Oxyde <- sapply(input_path03, function(x){
+                            utils::read.csv(file = x,
+                                            stringsAsFactors = FALSE,
+                                            header = T,
+                                            sep = ";",
+                                            dec = ".")
+    },simplify = F, USE.NAMES = T)
+
+  names(ExtraDataTC_04_Oxyde) <- sapply(names(ExtraDataTC_04_Oxyde), function(x){
+                aver <- strsplit(x, "_")[[1]]
+                aver <- aver[length(aver)]
+
+                strsplit(aver, ".csv")[[1]]
+
+            }, simplify = T)
+
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
   # Output Details
   output_obj_name <-  "DataTC_04_Oxyde"
   output_folder <- "./data-raw/Output/"
 
-  all_languages <- names(ThugChemR::DataTC_02_Elements)
+  all_languages <- names(DataTC_02_Elements)
 
   output_file <- paste0(output_obj_name,"_", all_languages,".csv")
   output_path <- paste0(output_folder, output_file)
@@ -35,12 +77,12 @@ Create_DataTC_04_Oxyde <- function(){
                         "Status_oxyde")
 
 
-  data_output <- sapply(all_languages, function(x){
+  data_output <- sapply(all_languages, function(selected_language){
 
-    # # # x <- "eng"
+    # # # selected_language <- "eng"
 
     # Reference Data Input : ENG
-    data_input <- ThugChemR::DataTC_03_Valences[[x]]
+    data_input <- DataTC_03_Valences[[selected_language]]
     seccion01 <- data_input[selected_cols_01]
 
 
@@ -52,11 +94,12 @@ Create_DataTC_04_Oxyde <- function(){
     new_columns <- list()
 
     # # # Oxide Status
-    # We must define for each valence on each element if its avairable for to be
-    # an oxide or not. The new vairable will be named 'status_oxyde'.
+    # We must define for each valence on each element if its available for to be
+    # an oxide or not. The new variable will be named 'status_oxyde'.
     # Only noble gas cant be oxyde!
     new_columns[[1]] <- sapply(1:nrow(seccion01), function(x){
 
+      #### x <- 1
       dt_oxyde <- seccion01$Status_oxyde[x]
       chem_formula <- "----"
 
@@ -67,7 +110,8 @@ Create_DataTC_04_Oxyde <- function(){
       if(dt_oxyde) {
         chem_formula <- Resolution_Oxyde(chem_symbol = selected_symbol,
                                          element_valence = selected_valence,
-                                         gas_status_element = selected_gas_status)$ChemFormule_pure
+                                         gas_status_element = selected_gas_status,
+                                         language = selected_language)$ChemFormule_pure
       }
 
       return(chem_formula)
@@ -76,35 +120,18 @@ Create_DataTC_04_Oxyde <- function(){
     new_columns[[1]][!data_input$Status_oxyde] <- "----"
     names(new_columns)[1] <- "ChemFormule_pure"
 
-
-    new_columns[[2]] <- rep("LALA", nrow(data_input))
-    new_columns[[2]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[2] <- "OxydePrefix_Classic"
-
-    # A esta la dejamos por ahora con el nombre del elemento
-    # hay que colocarle el nombre de cada oxido en su idioma a
-    # cada archivo.
-
-    # new_columns[[3]] <- data_input$Name
-    #new_columns[[3]][!data_input$Status_oxyde] <- "----"
-    # names(new_columns)[3] <- "OxydeName_Classic"
-
-    new_columns[[3]] <- ExtraDataTC_04_Oxyde[[x]]$OxydeName_Classic
-    names(new_columns)[3] <- "OxydeName_Classic"
+    # Classic Name
+    # Este nombre es tomado directamente del archiv CSV del idioma
+    # Esta info hay que agregarla al Help o documentacion en algun momento.
+    new_columns[[2]] <- ExtraDataTC_04_Oxyde[[selected_language]]$Name_Classic_Oxyde
+    names(new_columns)[2] <- "Name_Classic_Oxyde"
 
 
-    new_columns[[4]] <- paste0("Óxido ", new_columns[["OxydeName_Classic"]])
-    new_columns[[4]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[4] <- "OxydeFullName_Classic"
+    new_columns[[3]] <- ExtraDataTC_04_Oxyde[[selected_language]]$Name_IUPAC_Oxyde
+    names(new_columns)[3] <- "Name_IUPAC_Oxyde"
 
 
-
-    new_columns[[5]] <- paste0("Óxido de ", data_input$Name,
-                               " (", data_input$RomanValence, ")")
-    new_columns[[5]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[5] <- "OxydeFullName_IUPAC"
-
-    new_columns[[6]] <- sapply(new_columns[["ChemFormule_pure"]], function(x){
+    new_columns[[4]] <- sapply(new_columns[["ChemFormule_pure"]], function(x){
 
       #  x <- new_columns[["ChemFormule_pure"]][1]
       # # # language = "esp"
@@ -129,11 +156,11 @@ Create_DataTC_04_Oxyde <- function(){
 
       return(output)
     })
-    new_columns[[6]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[6] <- "amount01_oxyde_Stock"
+    new_columns[[4]][!data_input$Status_oxyde] <- "----"
+    names(new_columns)[4] <- "amount01_oxyde_Stock"
 
 
-    new_columns[[7]] <- sapply(new_columns[["ChemFormule_pure"]], function(x){
+    new_columns[[5]] <- sapply(new_columns[["ChemFormule_pure"]], function(x){
 
       #  x <- new_columns[["ChemFormule_pure"]][1]
       # Internal Prefix
@@ -153,21 +180,22 @@ Create_DataTC_04_Oxyde <- function(){
 
       return(output)
     })
-    new_columns[[7]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[7] <- "amount02_oxyde_Stock"
+    new_columns[[5]][!data_input$Status_oxyde] <- "----"
+    names(new_columns)[5] <- "amount02_oxyde_Stock"
 
 
-    new_columns[[8]] <- paste0(new_columns[["amount01_oxyde_Stock"]],
+    # Esto de aca es una chanchada...
+    # Le impone el espanion a todas las salidas.
+    # Hay que ver despues como armamos esta parte para cada idioma. ######
+    new_columns[[6]] <- paste0(new_columns[["amount01_oxyde_Stock"]],
                                                    "Óxido",
                                                    " de ",
                                                    new_columns[["amount02_oxyde_Stock"]],
                                                    data_input$Name)
-    new_columns[[8]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[8] <- "OxydeFullName_Stock"
+    new_columns[[6]][!data_input$Status_oxyde] <- "----"
+    names(new_columns)[6] <- "OxydeFullName_Stock"
 
-    new_columns[[9]] <- rep("----", nrow(data_input))
-    new_columns[[9]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[9] <- "OxydeFullName_Stock"
+
 
     # Final Armed
     columns_pack <- do.call(cbind.data.frame, new_columns)
@@ -181,7 +209,7 @@ Create_DataTC_04_Oxyde <- function(){
   }, simplify = F, USE.NAMES = T)
 
 
-
+  # Creamos "DataTC_04_Oxyde" como objeto
   assign(output_obj_name, data_output)
 
 
@@ -203,6 +231,10 @@ Create_DataTC_04_Oxyde <- function(){
                            col_names = T,
                            delim = ";")
   }
+
+  ###############################################################3
+  # Agregamos a ExtraDataTC_04_Oxyde al package
+  usethis::use_data(ExtraDataTC_04_Oxyde, overwrite = TRUE)
 
 }
 

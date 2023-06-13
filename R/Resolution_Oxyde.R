@@ -148,15 +148,15 @@ Resolution_Oxyde <- function(chem_symbol,
   names(output)[8] <- "format02_oxyde"
 
 
-  #####################################################
-  output[[9]] <- Nomenclature_Oxyde(chem_symbol,
-                               element_valence,
-                               gas_status_element,
-                               language)
-
-  names(output)[9] <- "Nomenclature_Oxyde"
-
-  #######################################################
+  # #####################################################
+  # output[[9]] <- Nomenclature_Oxyde(chem_symbol,
+  #                              element_valence,
+  #                              gas_status_element,
+  #                              language)
+  #
+  # names(output)[9] <- "Nomenclature_Oxyde"
+  #
+  # #######################################################
 
 
   #####################################################
@@ -218,9 +218,9 @@ Resolution_Oxyde <- function(chem_symbol,
     return(the_output)
   })
 
-  output[[10]] <- balance_rejunte
+  output[[9]] <- balance_rejunte
 
-  names(output)[10] <- "Balance_Oxyde"
+  names(output)[9] <- "Balance_Oxyde"
 
   #######################################################
 

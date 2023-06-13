@@ -17,7 +17,15 @@ server_ThugChemPage <- function(input, output, session) {
 
 
   symbol <- shiny::reactive({
-    input$symbol
+
+    # input$symbol
+    eleccion <- input$symbol
+
+    el_simbolo <- strsplit(eleccion, " - ")[[1]][2]
+    el_simbolo <- stringr::str_replace(string = el_simbolo, pattern = " ", replacement = "")
+    # print(el_simbolo)
+    el_simbolo
+
   })
 
   all_valence <- shiny::reactive({

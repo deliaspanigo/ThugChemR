@@ -21,7 +21,7 @@ ui <- shinydashboard::dashboardPage(
       shiny::column(4,
                     shiny::selectInput(inputId = "symbol",
                                        label = "Símbolo Químico",
-                                       choices = ThugChemR::DataTC_01_PeriodicTable[["eng"]]$Symbol),
+                                       choices = ThugChemR::DataTC_02_Elements[["esp"]]$ElementSelector01),
                     shiny::uiOutput("ui_valence")
       ),
       shiny::column(6,

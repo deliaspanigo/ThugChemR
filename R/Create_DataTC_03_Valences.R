@@ -11,10 +11,19 @@
 #'
 Create_DataTC_03_Valences <- function(){
 
+  input_obj_name <-  "DataTC_02_Elements"
+  input_folder <- "./data/"
+  input_file <- paste0(input_obj_name, ".rda")
+  input_path <- paste0(input_folder, input_file)
+
+  # Importamos el objeto "DataTC_01_PeriodicTable"
+  load(input_path)
+
+
   output_obj_name <-  "DataTC_03_Valences"
   output_folder <- "./data-raw/Output/"
 
-  all_languages <- names(ThugChemR::DataTC_02_Elements)
+  all_languages <- names(DataTC_02_Elements)
 
   output_file <- paste0(output_obj_name,"_", all_languages,".csv")
   output_path <- paste0(output_folder, output_file)
@@ -25,7 +34,7 @@ Create_DataTC_03_Valences <- function(){
     # # # x <- "eng"
 
     # Reference Data Input : ENG
-    data_input <- ThugChemR::DataTC_02_Elements[[x]]
+    data_input <- DataTC_02_Elements[[x]]
 
     # Take information from each element
     selected_cols_01 <- 1:11

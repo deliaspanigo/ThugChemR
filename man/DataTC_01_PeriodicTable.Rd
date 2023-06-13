@@ -5,7 +5,7 @@
 \alias{DataTC_01_PeriodicTable}
 \title{DataTC - Periodic Table - English Version}
 \format{
-\subsection{\code{DataTC_01_PeriodicTable_eng}}{
+\subsection{\code{DataTC_01_PeriodicTable}}{
 
 A data frame with 118 rows and 24 columns:
 \describe{

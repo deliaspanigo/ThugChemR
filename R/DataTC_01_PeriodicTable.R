@@ -5,7 +5,7 @@
 #'element, and columns with information have been added to perform data
 #'filtering.
 #'
-#' @format ## `DataTC_01_PeriodicTable_eng`
+#' @format ## `DataTC_01_PeriodicTable`
 #' A data frame with 118 rows and 24 columns:
 #' \describe{
 #'   \item{country}{Country name}
