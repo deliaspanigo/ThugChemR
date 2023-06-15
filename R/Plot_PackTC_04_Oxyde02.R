@@ -38,10 +38,10 @@ Plot_PackTC_04_Oxyde02 <- function(chem_symbol,
   complite_solution <- input_data[[selected_oxyde]]
   selected_resolution <- complite_solution$Level06_LaTeX02
 
-  chem_formula <- paste0("Fórmula: ", complite_solution$ChemFormule)
+  chem_formula <- paste0("Fórmula: ", complite_solution$ChemFormule_LaTeX)
   nomenclatura <- complite_solution$Nomenclature_Oxyde_02
 
-  plot(1:10, 1:10, col = "white", main = chem_formula,
+  plot(1:10, 1:10, col = "white", main = "",
        xlab = "", ylab = "", axes = F)
 
 
@@ -54,13 +54,15 @@ Plot_PackTC_04_Oxyde02 <- function(chem_symbol,
   par(new = TRUE)
 
 
-  plot(1:10, 1:10, col = "white", main = chem_formula,
-       xlab = "", ylab = "", axes = F)
+  plot(1:10, 1:10, col = "white", main = "Fórmula y Nomenclatura",
+       xlab = "", ylab = "", axes = F, cex.main=1.5)
 
 
 
 
-  graphics::text(3, 9, chem_formula, pos = 4, cex = 2)
+  graphics::text(x = 3, y = 9,
+                 labels = latex2exp::TeX(chem_formula),
+                 pos = 4, cex = 2)
 
   graphics::text(3, 7, nomenclatura[1], pos = 4, cex = 2)
   graphics::text(3, 5, nomenclatura[2], pos = 4, cex = 2)

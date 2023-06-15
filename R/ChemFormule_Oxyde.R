@@ -70,8 +70,20 @@ ChemFormule_Oxyde <- function(chem_symbol,
   output[[4]] <- output[[3]]$Oxyde[nrow(output[[3]])]
   names(output)[4] <- "ChemFormule_pure"
 
+  ####################################################################################
+  output[[5]] <- output[[4]]
+    dt_0 <- grepl("0",  output[[4]])
+    dt_1 <- grepl("1",  output[[4]])
 
+  dt_algo <- sum(sum(dt_0) + sum(dt_1)) > 0
+  if(dt_algo){
+    if (dt_0) output[[5]] <- paste0("\\phantom{", output[[5]], "}")
+    if (dt_1) output[[5]] <- stringr::str_replace_all(string = output[[5]], "1", "\\\\phantom{1}")
+  }
 
+  names(output)[5] <- "ChemFormule_LaTeX"
+
+  ####################################################################################
   # Final Return
   return(output)
 }

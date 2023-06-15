@@ -16,14 +16,6 @@ Resolution_Oxyde <- function(chem_symbol,
                              gas_status_element,
                              language){
 
-  # # # # #
-  # input_obj_name <-  "DataTC_04_Oxyde"
-  # input_folder <- "./data/"
-  # input_file <- paste0(input_obj_name, ".rda")
-  # input_path <- paste0(input_folder, input_file)
-
-  # # Importamos el objeto "DataTC_04_Oxyde"
-  # load(input_path)
 
   # chem_symbol <- "Fe"
   # element_valence <- 2
@@ -100,24 +92,73 @@ Resolution_Oxyde <- function(chem_symbol,
   colnames(output[[5]])[6] <- "Arrow"
   names(output)[5] <- "Level04_PlusAndArrow"
 
-  output[[6]] <- apply( output[[5]], 1 , function(x){
+  #######################################################
+
+  mod_phantom <- output[[5]]
+
+  for(k1 in 1:ncol(mod_phantom)) {
+    for(k2 in 1:nrow(mod_phantom)) {
+
+      # k1 <- 8
+      # k2 <- 3
+      esta_seleccion <- mod_phantom[k2, k1]
+
+      dt_0 <- grepl("0", esta_seleccion)
+      dt_1 <- grepl("1", esta_seleccion)
+
+      dt_algo <- sum(sum(dt_0) + sum(dt_1)) > 0
+      if(dt_algo){
+        if (dt_0) esta_seleccion <- paste0("\\phantom{", esta_seleccion, "}")
+        if (dt_1) esta_seleccion <- stringr::str_replace_all(string = esta_seleccion, "1", "\\\\phantom{1}")
+
+
+        # if (dt_1) esta_seleccion <- gsub(pattern = "1", replacement = "\\phantom{1}", x = esta_seleccion)
+
+
+        mod_phantom[k2, k1] <- esta_seleccion
+      }
+
+    }
+  }
+
+  output[[6]] <- mod_phantom
+
+
+  names(output)[6] <- "Level05_PlusAndArrow"
+
+
+  ######################################################
+
+  output[[7]] <- apply( output[[6]], 1 , function(x){
     paste0("$", paste0(x, collapse =""), "$")
   })
-  output[[6]] <- as.data.frame(output[[6]])
-  colnames(output[[6]])[1] <- "Oxyde"
-  names(output)[6] <- "Level06_LaTeX02"
+  output[[7]] <- as.data.frame(output[[7]])
+  colnames(output[[7]])[1] <- "Oxyde"
+  names(output)[7] <- "Level06_LaTeX02"
 
 
-  # output[[7]] <- output[[3]]$Oxyde[nrow(output[[3]])]
-  output[[7]] <- ChemFormule_Oxyde(chem_symbol = chem_symbol,
+  ###################################################################################
+
+  output[[8]] <- ChemFormule_Oxyde(chem_symbol = chem_symbol,
                                    element_valence = element_valence,
                                    gas_status_element = gas_status_element,
                                    language = language)$ChemFormule_pure
 
-  names(output)[7] <- "ChemFormule_pure"
+  names(output)[8] <- "ChemFormule_pure"
 
 
-  #######################################################
+  #######################################################################################
+
+  # output[[9]] <- ChemFormule_Oxyde(chem_symbol = chem_symbol,
+  #                                  element_valence = element_valence,
+  #                                  gas_status_element = gas_status_element,
+  #                                  language = language)$ChemFormule_LaTeX
+  output[[9]] <- output[[6]][nrow(output[[6]]), ncol(output[[6]])]
+  output[[9]] <- paste0("$", output[[9]], "$")
+  names(output)[9] <- "ChemFormule_LaTeX"
+
+
+  #######################################################################################
 
   # # # # # # Los siguientes pasos son efectivamente "SOLVER"...
   # # # 5) Simplificacion de los subindices en el oxido
@@ -153,31 +194,31 @@ Resolution_Oxyde <- function(chem_symbol,
   # entreda_mod[1] <- 'You do not see me initially: $$e^{i \\pi} + 1 = 0$$'
   # entrega_mod <- rep("$$e^{i \\pi} + 1 = 0$$", 8)
 
-  output[[8]] <- cbind.data.frame(entrega_mod,
+  output[[10]] <- cbind.data.frame(entrega_mod,
                                   text_oxyde_general,
                                   text_oxyde_particular)
 
-  colnames( output[[8]]) <- c("Steps", "General", "Particular")
-  names(output)[8] <- "format02_oxyde"
+  colnames( output[[10]]) <- c("Steps", "General", "Particular")
+  names(output)[10] <- "format02_oxyde"
 
 
   #####################################################
-  output[[9]] <- Take_Nomenclature_Oxyde(DataTC_04_Oxyde,
+  output[[11]] <- Take_Nomenclature_Oxyde(DataTC_04_Oxyde,
                                          chem_symbol,
                                          element_valence,
                                          gas_status_element,
                                          language)[[1]]
 
-  names(output)[9] <- "Nomenclature_Oxyde_01"
+  names(output)[11] <- "Nomenclature_Oxyde_01"
 
-
-  output[[10]] <-  Take_Nomenclature_Oxyde(DataTC_04_Oxyde,
+  #################################################################
+  output[[12]] <-  Take_Nomenclature_Oxyde(DataTC_04_Oxyde,
                                            chem_symbol,
                                            element_valence,
                                            gas_status_element,
                                            language)[[2]]
 
-  names(output)[10] <- "Nomenclature_Oxyde_02"
+  names(output)[12] <- "Nomenclature_Oxyde_02"
   #######################################################
 
 
@@ -240,11 +281,10 @@ Resolution_Oxyde <- function(chem_symbol,
     return(the_output)
   })
 
-  output[[11]] <- balance_rejunte
+  output[[13]] <- balance_rejunte
 
-  names(output)[11] <- "Balance_Oxyde"
+  names(output)[13] <- "Balance_Oxyde"
 
-  #######################################################
 
   # Final Return
   return(output)
