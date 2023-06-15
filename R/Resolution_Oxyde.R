@@ -16,6 +16,14 @@ Resolution_Oxyde <- function(chem_symbol,
                              gas_status_element,
                              language){
 
+  # # # # #
+  # input_obj_name <-  "DataTC_04_Oxyde"
+  # input_folder <- "./data/"
+  # input_file <- paste0(input_obj_name, ".rda")
+  # input_path <- paste0(input_folder, input_file)
+
+  # # Importamos el objeto "DataTC_04_Oxyde"
+  # load(input_path)
 
   # chem_symbol <- "Fe"
   # element_valence <- 2
@@ -100,7 +108,12 @@ Resolution_Oxyde <- function(chem_symbol,
   names(output)[6] <- "Level06_LaTeX02"
 
 
-  output[[7]] <- output[[3]]$Oxyde[nrow(output[[3]])]
+  # output[[7]] <- output[[3]]$Oxyde[nrow(output[[3]])]
+  output[[7]] <- ChemFormule_Oxyde(chem_symbol = chem_symbol,
+                                   element_valence = element_valence,
+                                   gas_status_element = gas_status_element,
+                                   language = language)$ChemFormule_pure
+
   names(output)[7] <- "ChemFormule_pure"
 
 
@@ -148,15 +161,24 @@ Resolution_Oxyde <- function(chem_symbol,
   names(output)[8] <- "format02_oxyde"
 
 
-  # #####################################################
-  # output[[9]] <- Nomenclature_Oxyde(chem_symbol,
-  #                              element_valence,
-  #                              gas_status_element,
-  #                              language)
-  #
-  # names(output)[9] <- "Nomenclature_Oxyde"
-  #
-  # #######################################################
+  #####################################################
+  output[[9]] <- Take_Nomenclature_Oxyde(DataTC_04_Oxyde,
+                                         chem_symbol,
+                                         element_valence,
+                                         gas_status_element,
+                                         language)[[1]]
+
+  names(output)[9] <- "Nomenclature_Oxyde_01"
+
+
+  output[[10]] <-  Take_Nomenclature_Oxyde(DataTC_04_Oxyde,
+                                           chem_symbol,
+                                           element_valence,
+                                           gas_status_element,
+                                           language)[[2]]
+
+  names(output)[10] <- "Nomenclature_Oxyde_02"
+  #######################################################
 
 
   #####################################################
@@ -218,9 +240,9 @@ Resolution_Oxyde <- function(chem_symbol,
     return(the_output)
   })
 
-  output[[9]] <- balance_rejunte
+  output[[11]] <- balance_rejunte
 
-  names(output)[9] <- "Balance_Oxyde"
+  names(output)[11] <- "Balance_Oxyde"
 
   #######################################################
 

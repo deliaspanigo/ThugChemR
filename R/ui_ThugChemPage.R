@@ -20,7 +20,7 @@ ui <- shinydashboard::dashboardPage(
     shiny::fluidRow(
       shiny::column(4,
                     shiny::selectInput(inputId = "symbol",
-                                       label = "Símbolo Químico",
+                                       label = "NúmAtóm - Símbolo - Nombre",
                                        choices = ThugChemR::DataTC_02_Elements[["esp"]]$ElementSelector01),
                     shiny::uiOutput("ui_valence")
       ),

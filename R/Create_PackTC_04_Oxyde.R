@@ -16,11 +16,20 @@
 Create_PackTC_04_Oxyde <- function(){
 
 
+  # # # #
+  input_obj_name <-  "DataTC_04_Oxyde"
+  input_folder <- "./data/"
+  input_file <- paste0(input_obj_name, ".rda")
+  input_path <- paste0(input_folder, input_file)
+
+  # Importamos el objeto "DataTC_01_PeriodicTable"
+  load(input_path)
+
   # Output Details
   output_obj_name <-  "PackTC_04_Oxyde"
   output_folder <- "./data-raw/Output/"
 
-  all_languages <- names(ThugChemR::DataTC_04_Oxyde)
+  all_languages <- names(DataTC_04_Oxyde)
 
   # Unique .RData
   # Is a big big list with all about oxyde
@@ -58,6 +67,9 @@ Create_PackTC_04_Oxyde <- function(){
                                     pad = "0")
 
       chem_formule <-  resolution_complite$ChemFormule
+
+
+
 
       final_name <- paste0("Oxyde_", the_order, "_",
                            chem_symbol, element_valence, "_",

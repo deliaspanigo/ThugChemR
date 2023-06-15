@@ -25,6 +25,7 @@ Plot_PackTC_04_Oxyde02 <- function(chem_symbol,
   # chem_symbol = "H"
   # element_valence = 1
   # gas_status_element = TRUE
+  # language <- "esp"
 
   input_data <- ThugChemR::PackTC_04_Oxyde[[language]]
 
@@ -37,8 +38,8 @@ Plot_PackTC_04_Oxyde02 <- function(chem_symbol,
   complite_solution <- input_data[[selected_oxyde]]
   selected_resolution <- complite_solution$Level06_LaTeX02
 
-  chem_formula <- complite_solution$ChemFormule
-  nomenclatura <- complite_solution$Nomenclature_Oxyde
+  chem_formula <- paste0("Fórmula: ", complite_solution$ChemFormule)
+  nomenclatura <- complite_solution$Nomenclature_Oxyde_02
 
   plot(1:10, 1:10, col = "white", main = chem_formula,
        xlab = "", ylab = "", axes = F)

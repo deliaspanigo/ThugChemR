@@ -20,7 +20,7 @@ install()
 # use_package('stats')
 # use_data_raw()
 
-# use_r("ExtraDataTC_04_Oxyde")
+# use_r("ChemFormule_Oxyde")
 
-# rename_files(old = "DataTC_01_PeriodicTable_eng",
-#              new = "DataTC_01_PeriodicTable")
+# rename_files(old = "Nomenclature_Oxyde",
+#              new = "Take_Nomenclature_Oxyde")

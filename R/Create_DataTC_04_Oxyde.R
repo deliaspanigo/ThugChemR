@@ -16,27 +16,20 @@ Create_DataTC_04_Oxyde <- function(){
   # Input 01 y 02
   input_obj_name01 <-  "DataTC_02_Elements"
   input_obj_name02 <-  "DataTC_03_Valences"
-
   input_folder <- "./data/"
-
   input_file01 <- paste0(input_obj_name01, ".rda")
   input_file02 <- paste0(input_obj_name02, ".rda")
-
   input_path01 <- paste0(input_folder, input_file01)
   input_path02 <- paste0(input_folder, input_file02)
-
-  # Importamos el objeto "DataTC_02_Elements" y "DataTC_03_Valences"
-  load(input_path01)
-  load(input_path02)
-  # # # # # # # # # # # # # # #
+  load(input_path01) # objeto "DataTC_02_Elements"
+  load(input_path02) # objeto "DataTC_03_Valences"
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
   # Input 03
   input_obj_name03 <-  "ExtraDataTC_04_Oxyde"
   input_folder03 <- "./data-raw/ExtraData/"
   input_file03 <- list.files(input_folder03)
   input_path03 <- paste0(input_folder03, input_file03)
-
-
   ExtraDataTC_04_Oxyde <- sapply(input_path03, function(x){
                             utils::read.csv(file = x,
                                             stringsAsFactors = FALSE,
@@ -44,7 +37,6 @@ Create_DataTC_04_Oxyde <- function(){
                                             sep = ";",
                                             dec = ".")
     },simplify = F, USE.NAMES = T)
-
   names(ExtraDataTC_04_Oxyde) <- sapply(names(ExtraDataTC_04_Oxyde), function(x){
                 aver <- strsplit(x, "_")[[1]]
                 aver <- aver[length(aver)]
@@ -52,34 +44,32 @@ Create_DataTC_04_Oxyde <- function(){
                 strsplit(aver, ".csv")[[1]]
 
             }, simplify = T)
-
-  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
   # Output Details
   output_obj_name <-  "DataTC_04_Oxyde"
   output_folder <- "./data-raw/Output/"
-
   all_languages <- names(DataTC_02_Elements)
-
   output_file <- paste0(output_obj_name,"_", all_languages,".csv")
   output_path <- paste0(output_folder, output_file)
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-
-  selected_cols_01 <- c("Order", "Symbol",  "Name", "AtomicNumber",
-                        "Group", "Period",  "Type", "Subtype",
-                        "State", "Valence", "AmountOfValences",
-                        "OrderGeneralValences", "OrderValenceOnElement",
-                        "SelectedValence", "RomanValence",
-                        "Type_Metal", "Type_NonMetal", "Type_Metalloide",
-                        "Type_NobleGas", "State_Solid", "State_Liquid",
-                        "State_Gas", "State_Dude", "Subtype_Halogen",
-                        "Status_oxyde")
 
 
   data_output <- sapply(all_languages, function(selected_language){
 
     # # # selected_language <- "eng"
+
+    selected_cols_01 <- c("Order", "Symbol",  "Name", "AtomicNumber",
+                          "Group", "Period",  "Type", "Subtype",
+                          "State", "Valence", "AmountOfValences",
+                          "OrderGeneralValences", "OrderValenceOnElement",
+                          "SelectedValence", "RomanValence",
+                          "Type_Metal", "Type_NonMetal", "Type_Metalloide",
+                          "Type_NobleGas", "State_Solid", "State_Liquid",
+                          "State_Gas", "State_Dude", "Subtype_Halogen",
+                          "Status_oxyde")
 
     # Reference Data Input : ENG
     data_input <- DataTC_03_Valences[[selected_language]]
@@ -108,7 +98,7 @@ Create_DataTC_04_Oxyde <- function(){
       selected_gas_status <- seccion01$State_Gas[x]
 
       if(dt_oxyde) {
-        chem_formula <- Resolution_Oxyde(chem_symbol = selected_symbol,
+        chem_formula <- ChemFormule_Oxyde(chem_symbol = selected_symbol,
                                          element_valence = selected_valence,
                                          gas_status_element = selected_gas_status,
                                          language = selected_language)$ChemFormule_pure
@@ -193,7 +183,7 @@ Create_DataTC_04_Oxyde <- function(){
                                                    new_columns[["amount02_oxyde_Stock"]],
                                                    data_input$Name)
     new_columns[[6]][!data_input$Status_oxyde] <- "----"
-    names(new_columns)[6] <- "OxydeFullName_Stock"
+    names(new_columns)[6] <- "Name_Stock_Oxyde"
 
 
 
