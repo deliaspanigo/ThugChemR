@@ -59,7 +59,7 @@ Create_DataTC_04_Oxyde <- function(){
 
   data_output <- sapply(all_languages, function(selected_language){
 
-    # # # selected_language <- "eng"
+    # # # selected_language <- "esp"
 
     selected_cols_01 <- c("Order", "Symbol",  "Name", "AtomicNumber",
                           "Group", "Period",  "Type", "Subtype",
@@ -114,6 +114,16 @@ Create_DataTC_04_Oxyde <- function(){
     # Este nombre es tomado directamente del archiv CSV del idioma
     # Esta info hay que agregarla al Help o documentacion en algun momento.
     new_columns[[2]] <- ExtraDataTC_04_Oxyde[[selected_language]]$Name_Classic_Oxyde
+    new_columns[[2]] <- tolower(new_columns[[2]]) # Todo a minusculas
+    new_columns[[2]] <- stringi::stri_trans_totitle(new_columns[[2]]) # Solo la primera es mayuscula
+    new_columns[[2]] <- stringr::str_replace_all(string = new_columns[[2]],
+                                                 pattern = "De", replacement = "de")
+
+    new_columns[[2]] <- stringr::str_replace_all(string = new_columns[[2]],
+                                                 pattern = "oo", replacement = "o")
+    new_columns[[2]] <- stringr::str_replace_all(string = new_columns[[2]],
+                                                 pattern = "oO", replacement = "o")
+
     names(new_columns)[2] <- "Name_Classic_Oxyde"
 
 
@@ -183,6 +193,17 @@ Create_DataTC_04_Oxyde <- function(){
                                                    new_columns[["amount02_oxyde_Stock"]],
                                                    data_input$Name)
     new_columns[[6]][!data_input$Status_oxyde] <- "----"
+    new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
+                                                 pattern = "oÓ", replacement = "Ó")
+    new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
+                                                 pattern = "aA", replacement = "A")
+
+    # new_columns[[6]] <- tolower(new_columns[[6]]) # Todo a minusculas
+    # new_columns[[6]] <- stringi::stri_trans_totitle(new_columns[[6]]) # Solo la primera es mayuscula
+    # new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
+    #                                              pattern = "De", replacement = "de")
+    # new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
+    #                                              pattern = "oó", replacement = "ó")
     names(new_columns)[6] <- "Name_Stock_Oxyde"
 
 

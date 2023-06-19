@@ -1,4 +1,4 @@
-﻿Order;Symbol;Name;esp
+Order;Symbol;Name;esp
 1;H;Hydrogen;Hidrógeno
 2;He;Helium;Helio
 3;Li;Lithium;Litio
@@ -59,7 +59,7 @@
 58;Ce;Cerium;Cerio
 59;Pr;Praseodymium;Praseodimio
 60;Nd;Neodymium;Neodimio
-61;Pm;Promise;Promesa
+61;Pm;Promethium;Prometio
 62;Sm;Samarium;Samario
 63;Eu;Europium;Europio
 64;Gd;Gadolinium;Gadolinio
@@ -80,10 +80,10 @@
 79;Au;Gold;Oro
 80;Hg;Mercury;Mercurio
 81;Tl;Thallium;Talio
-82;Pb;Lead;Dirigir
+82;Pb;Plumbum;Plomo
 83;Bi;Bismuth;Bismuto
 84;Po;Polonium;Polonio
-85;At;Astatus;Aestado
+85;At;Astatus;Astato
 86;Rn;Radon;Radón
 87;Fr;Francius;Francisco
 88;Ra;Radio;Radio

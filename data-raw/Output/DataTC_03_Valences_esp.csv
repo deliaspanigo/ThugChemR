@@ -107,7 +107,7 @@
 106;"Pr";"Praseodimio";59;3;6;"Metal";"Lantánidos";"Sólido";"3,4";2;106;1;"3";"III";140.90766;6.77;3017;931;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 59 - Pr - Praseodimio";TRUE
 107;"Pr";"Praseodimio";59;3;6;"Metal";"Lantánidos";"Sólido";"3,4";2;107;2;"4";"IV";140.90766;6.77;3017;931;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 59 - Pr - Praseodimio";TRUE
 108;"Nd";"Neodimio";60;3;6;"Metal";"Lantánidos";"Sólido";"3";1;108;1;"3";"III";144242;7;3127;1016;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 60 - Nd - Neodimio";TRUE
-109;"Pm";"Promesa";61;3;6;"Metal";"Lantánidos";"Sólido";"3";1;109;1;"3";"III";145;7.26;3000;1042;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 61 - Pm - Promesa";TRUE
+109;"Pm";"Promise";61;3;6;"Metal";"Lantánidos";"Sólido";"3";1;109;1;"3";"III";145;7.26;3000;1042;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 61 - Pm - Promise";TRUE
 110;"Sm";"Samario";62;3;6;"Metal";"Lantánidos";"Sólido";"2,3";2;110;1;"2";"II";150.36;7.52;1794;1074;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 62 - Sm - Samario";TRUE
 111;"Sm";"Samario";62;3;6;"Metal";"Lantánidos";"Sólido";"2,3";2;111;2;"3";"III";150.36;7.52;1794;1074;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 62 - Sm - Samario";TRUE
 112;"Eu";"Europio";63;3;6;"Metal";"Lantánidos";"Sólido";"2,3";2;112;1;"2";"II";151964;5.24;1529;822;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 63 - Eu - Europio";TRUE
@@ -152,16 +152,16 @@
 151;"Hg";"Mercurio";80;12;6;"Metal";"Lantánidos";"Líquido";"1,2";2;151;2;"2";"II";200592;13.5;357;-38.9;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;" 80 - Hg - Mercurio";TRUE
 152;"Tl";"Talio";81;13;6;"Metal";"Lantánidos";"Sólido";"1,3";2;152;1;"1";"I";204.3835;11.9;1457;303;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 81 - Tl - Talio";TRUE
 153;"Tl";"Talio";81;13;6;"Metal";"Lantánidos";"Sólido";"1,3";2;153;2;"3";"III";204.3835;11.9;1457;303;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 81 - Tl - Talio";TRUE
-154;"Pb";"Dirigir";82;14;6;"Metal";"Lantánidos";"Sólido";"2,4";2;154;1;"2";"II";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Dirigir";TRUE
-155;"Pb";"Dirigir";82;14;6;"Metal";"Lantánidos";"Sólido";"2,4";2;155;2;"4";"IV";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Dirigir";TRUE
+154;"Pb";"Lead";82;14;6;"Metal";"Lantánidos";"Sólido";"2,4";2;154;1;"2";"II";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Lead";TRUE
+155;"Pb";"Lead";82;14;6;"Metal";"Lantánidos";"Sólido";"2,4";2;155;2;"4";"IV";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Lead";TRUE
 156;"Bi";"Bismuto";83;15;6;"Metal";"Lantánidos";"Sólido";"3,5";2;156;1;"3";"III";208.9804;9.75;1560;271;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 83 - Bi - Bismuto";TRUE
 157;"Bi";"Bismuto";83;15;6;"Metal";"Lantánidos";"Sólido";"3,5";2;157;2;"5";"V";208.9804;9.75;1560;271;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 83 - Bi - Bismuto";TRUE
 158;"Po";"Polonio";84;16;6;"Metaloide";"-";"Sólido";"2,4";2;158;1;"2";"II";209;9.32;962;254;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 84 - Po - Polonio";TRUE
 159;"Po";"Polonio";84;16;6;"Metaloide";"-";"Sólido";"2,4";2;159;2;"4";"IV";209;9.32;962;254;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 84 - Po - Polonio";TRUE
-160;"At";"Aestado";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;160;1;"1";"I";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Aestado";TRUE
-161;"At";"Aestado";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;161;2;"3";"III";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Aestado";TRUE
-162;"At";"Aestado";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;162;3;"5";"V";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Aestado";TRUE
-163;"At";"Aestado";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;163;4;"7";"VII";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Aestado";TRUE
+160;"At";"Astato";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;160;1;"1";"I";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Astato";TRUE
+161;"At";"Astato";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;161;2;"3";"III";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Astato";TRUE
+162;"At";"Astato";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;162;3;"5";"V";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Astato";TRUE
+163;"At";"Astato";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;163;4;"7";"VII";210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Astato";TRUE
 164;"Rn";"Radón";86;18;6;"Gas Noble";"-";"Gas";"0";1;164;1;"0";"";222;0.00973;-61.8;-71;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;" 86 - Rn - Radón";FALSE
 165;"Fr";"Francisco";87;1;7;"Metal";"Alcalino";"Líquido";"1";1;165;1;"1";"I";223;NA;677;27;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;" 87 - Fr - Francisco";TRUE
 166;"Ra";"Radio";88;2;7;"Metal";"Tierras alcalinas";"Sólido";"2";1;166;1;"2";"II";226;5;1140;700;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 88 - Ra - Radio";TRUE
