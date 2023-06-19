@@ -40,6 +40,7 @@ Plot_PackTC_04_Oxyde02 <- function(chem_symbol,
 
   chem_formula <- paste0("Fórmula: ", complite_solution$ChemFormule_LaTeX)
   nomenclatura <- complite_solution$Nomenclature_Oxyde_02
+  # nomenclatura <- nomenclatura[c(1,2,4)]
 
   plot(1:10, 1:10, col = "white", main = "",
        xlab = "", ylab = "", axes = F)

@@ -197,14 +197,23 @@ Create_DataTC_04_Oxyde <- function(){
                                                  pattern = "oÓ", replacement = "Ó")
     new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
                                                  pattern = "aA", replacement = "A")
+    new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
+                                                 pattern = " De ", replacement = " de ")
+    names(new_columns)[6] <- "Name_Stock_Oxyde"
 
-    # new_columns[[6]] <- tolower(new_columns[[6]]) # Todo a minusculas
-    # new_columns[[6]] <- stringi::stri_trans_totitle(new_columns[[6]]) # Solo la primera es mayuscula
-    # new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
-    #                                              pattern = "De", replacement = "de")
+    #####################################################################################
+
+    new_columns[[7]] <- new_columns[[6]]
+    new_columns[[7]] <- tolower(new_columns[[7]]) # Todo a minusculas
+    new_columns[[7]] <- stringi::stri_trans_totitle(new_columns[[7]]) # Solo la primera es mayuscula
+    new_columns[[7]] <- stringr::str_replace_all(string = new_columns[[7]],
+                                                 pattern = " De ", replacement = " de ")
+
+    names(new_columns)[7] <- "Name_Stock_Oxyde02"
+
     # new_columns[[6]] <- stringr::str_replace_all(string = new_columns[[6]],
     #                                              pattern = "oó", replacement = "ó")
-    names(new_columns)[6] <- "Name_Stock_Oxyde"
+
 
 
 

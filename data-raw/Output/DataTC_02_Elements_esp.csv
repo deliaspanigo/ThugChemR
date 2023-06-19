@@ -80,7 +80,7 @@
 79;"Au";"Oro";79;11;6;"Metal";"Lantánidos";"Sólido";"1,3";2;196.966569;19.3;3080;1064;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 79 - Au - Oro"
 80;"Hg";"Mercurio";80;12;6;"Metal";"Lantánidos";"Líquido";"1,2";2;200592;13.5;357;-38.9;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;" 80 - Hg - Mercurio"
 81;"Tl";"Talio";81;13;6;"Metal";"Lantánidos";"Sólido";"1,3";2;204.3835;11.9;1457;303;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 81 - Tl - Talio"
-82;"Pb";"Lead";82;14;6;"Metal";"Lantánidos";"Sólido";"2,4";2;207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Lead"
+82;"Pb";"Plomo";82;14;6;"Metal";"Lantánidos";"Sólido";"2,4";2;207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Plomo"
 83;"Bi";"Bismuto";83;15;6;"Metal";"Lantánidos";"Sólido";"3,5";2;208.9804;9.75;1560;271;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 83 - Bi - Bismuto"
 84;"Po";"Polonio";84;16;6;"Metaloide";"-";"Sólido";"2,4";2;209;9.32;962;254;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 84 - Po - Polonio"
 85;"At";"Astato";85;17;6;"No Metal";"Halógenos";"Sólido";"1,3,5,7";4;210;NA;337;302;FALSE;TRUE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;TRUE;" 85 - At - Astato"

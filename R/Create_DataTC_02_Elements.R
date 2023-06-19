@@ -56,7 +56,7 @@ Create_DataTC_02_Elements <- function(){
 
   data_output <- sapply(all_languages, function(x){
 
-    ### x <- all_languages[1]
+    ### x <- "esp"
 
     ElementSelector01 <- paste0(stringr::str_pad(DataTC_01_PeriodicTable[[x]]$Order, 3, "left"), " - ",
                                 stringr::str_pad(DataTC_01_PeriodicTable[[x]]$Symbol, 2, "right"), " - ",

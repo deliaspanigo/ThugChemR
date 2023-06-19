@@ -152,8 +152,8 @@
 151;"Hg";"Mercury";80;12;6;"Metal";"Lanthanides";"Liquid";"1,2";2;151;2;"2";"II";200592;13.5;357;-38.9;TRUE;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;" 80 - Hg - Mercury";TRUE
 152;"Tl";"Thallium";81;13;6;"Metal";"Lanthanides";"Solid";"1,3";2;152;1;"1";"I";204.3835;11.9;1457;303;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 81 - Tl - Thallium";TRUE
 153;"Tl";"Thallium";81;13;6;"Metal";"Lanthanides";"Solid";"1,3";2;153;2;"3";"III";204.3835;11.9;1457;303;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 81 - Tl - Thallium";TRUE
-154;"Pb";"Lead";82;14;6;"Metal";"Lanthanides";"Solid";"2,4";2;154;1;"2";"II";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Lead";TRUE
-155;"Pb";"Lead";82;14;6;"Metal";"Lanthanides";"Solid";"2,4";2;155;2;"4";"IV";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Lead";TRUE
+154;"Pb";"Plumbum";82;14;6;"Metal";"Lanthanides";"Solid";"2,4";2;154;1;"2";"II";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Plumbum";TRUE
+155;"Pb";"Plumbum";82;14;6;"Metal";"Lanthanides";"Solid";"2,4";2;155;2;"4";"IV";207.2;11.4;1740;327.5;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 82 - Pb - Plumbum";TRUE
 156;"Bi";"Bismuth";83;15;6;"Metal";"Lanthanides";"Solid";"3,5";2;156;1;"3";"III";208.9804;9.75;1560;271;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 83 - Bi - Bismuth";TRUE
 157;"Bi";"Bismuth";83;15;6;"Metal";"Lanthanides";"Solid";"3,5";2;157;2;"5";"V";208.9804;9.75;1560;271;TRUE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 83 - Bi - Bismuth";TRUE
 158;"Po";"Polonium";84;16;6;"Metalloid";"-";"Solid";"2,4";2;158;1;"2";"II";209;9.32;962;254;FALSE;FALSE;FALSE;FALSE;TRUE;FALSE;FALSE;FALSE;FALSE;" 84 - Po - Polonium";TRUE

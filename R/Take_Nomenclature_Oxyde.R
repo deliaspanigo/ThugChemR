@@ -34,8 +34,7 @@ Take_Nomenclature_Oxyde <- function(DataTC_04_Oxyde, chem_symbol,
   dt_symbol <- DataTC_04_Oxyde[[language]]$Symbol == chem_symbol
   dt_selected_valence <- DataTC_04_Oxyde$eng$SelectedValence == element_valence
 
-  pos_names <- c("Name_Classic_Oxyde", "Name_IUPAC_Oxyde",
-                 "Name_Stock_Oxyde")
+  pos_names <- c("Name_Classic_Oxyde", "Name_IUPAC_Oxyde", "Name_Stock_Oxyde02")
 
   dt_row <- (dt_symbol + dt_selected_valence) == 2
 
@@ -43,7 +42,7 @@ Take_Nomenclature_Oxyde <- function(DataTC_04_Oxyde, chem_symbol,
   all_oxyde_names <- as.vector(as.matrix(all_oxyde_names))
   names(all_oxyde_names) <- pos_names
 
-  add_details <- c("Clásica: ", "IUPAC: ", "Stock: ")
+  add_details <- c("Clásica: ", "IUPAC: ", "Stock: ", "Stock: ")
   add_details <- paste0(add_details, all_oxyde_names)
 
   the_output <- list(all_oxyde_names, add_details)

@@ -19,9 +19,9 @@ Plot_PackTC_04_Oxyde01 <- function(chem_symbol,
                                  verbose = TRUE,
                                  language){
 
-  # chem_symbol = "H"
-  # element_valence = 1
-  # gas_status_element = TRUE
+  # chem_symbol = "Pb"
+  # element_valence = 2
+  # gas_status_element = FALSE
 
   input_data <- ThugChemR::PackTC_04_Oxyde[[language]]
 
