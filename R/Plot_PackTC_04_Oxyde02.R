@@ -63,11 +63,11 @@ Plot_PackTC_04_Oxyde02 <- function(chem_symbol,
 
   graphics::text(x = 3, y = 9,
                  labels = latex2exp::TeX(chem_formula),
-                 pos = 4, cex = 2)
+                 pos = 4, cex = 3)
 
-  graphics::text(3, 7, nomenclatura[1], pos = 4, cex = 2)
-  graphics::text(3, 5, nomenclatura[2], pos = 4, cex = 2)
-  graphics::text(3, 3, nomenclatura[3], pos = 4, cex = 2)
+  graphics::text(3, 7, nomenclatura[1], pos = 4, cex = 3)
+  graphics::text(3, 5, nomenclatura[2], pos = 4, cex = 3)
+  graphics::text(3, 3, nomenclatura[3], pos = 4, cex = 3)
 
 }
 

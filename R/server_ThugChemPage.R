@@ -93,16 +93,15 @@ server_ThugChemPage <- function(input, output, session) {
     if(is.null(capsule())) return(NULL)
 
     chem_symbol <- capsule()[[1]]
-    the_valence <- capsule()[[2]]
+    element_valence <- capsule()[[2]]
     language <- capsule()[[4]]
 
-    fusion <- paste0("_", chem_symbol, the_valence, "_")
 
-    aca <- names(PackTC_04_Oxyde[[language]])
-    dt_este <- grepl(pattern = fusion, x = aca)
-    el_elegido <- aca[dt_este]
 
-    ThugChemR::PackTC_04_Oxyde[[language]][[el_elegido]][["format02_oxyde"]]
+    Plot_PackTC_04_Oxyde02(chem_symbol,
+                           element_valence,
+                           verbose = TRUE,
+                           language)
 
     # })
   })
