@@ -22,6 +22,7 @@ Plot_PackTC_04_Oxyde01 <- function(chem_symbol,
   # chem_symbol = "H"
   # element_valence = 1
   # gas_status_element = TRUE
+  # language <- "esp"
 
   input_data <- ThugChemR::PackTC_04_Oxyde[[language]]
 

@@ -86,7 +86,7 @@ server_ThugChemPage <- function(input, output, session) {
                                     language = language)
 
     # })
-  })
+  }, height = 800, width = 1000)
 
   output$plotPack02 <- shiny::renderPlot({
 
@@ -168,8 +168,12 @@ server_ThugChemPage <- function(input, output, session) {
   # aca hayq ue hacer alguna magia para no tener que poner el 8
   # y que tome max_table() directamente
   observe({
-    lapply(1:8, function(x) {
-      output[[paste0("table_", x)]] <- renderTable({ special_selection()[[x]] })
+    lapply(1:9, function(x) {
+
+      el_modi <- x
+      if(el_modi == 9) el_modi <- 8
+
+      output[[paste0("table_", x)]] <- renderTable({ special_selection()[[el_modi]] })
     })
   })
 
@@ -180,17 +184,21 @@ server_ThugChemPage <- function(input, output, session) {
     #   tableOutput(paste0("table_", i))
     # )
 
-    n <- 8
+    n <- 8 + 1
     sapply(1:n, function(i) {
 
+      paso_step <- paste0("Paso ", i, " de ", n)
+      el_modi <- i
+      if(el_modi == 9) el_modi <- 8
 
       shiny::renderUI(
-
+        div(
         shiny::fluidRow(
-          shiny::column(6, h3(shiny::withMathJax(Resol02_oxyde()[i,1]))),
-          shiny::column(2),
+          shiny::column(3, h2(paso_step)),
+          shiny::column(5, h3(shiny::withMathJax(Resol02_oxyde()[el_modi,1]))),
+          shiny::column(1),
           shiny::div(shiny::column(4, tableOutput(paste0("table_", i))), style = "font-size:150%")
-        )
+        ), br())
       )
 
   })
@@ -207,22 +215,35 @@ server_ThugChemPage <- function(input, output, session) {
 
     # tabs_n <- lapply(paste("tabs ", 1:nrow(Resol02_oxyde()), sep = ""), tabPanel)
     # do.call(tabsetPanel, tabs_n)
-    n <- nrow(Resol02_oxyde())
+    n <- nrow(Resol02_oxyde()) + 1
+    # tabs_n <- paste("tabsA ", 1:n, sep = "")
     tabs_n <- paste("tabsA ", 1:n, sep = "")
 
-    sapply(1:n, function(i) {
+    sapply(1:n, function(i){
+
+      texto01 <- Resol02_oxyde()[i,2]
+      texto02 <- Resol02_oxyde()[i,2]
+
+      if(i == 9){
+        texto01 <- "Ecuación Final Balanceada"
+        texto02 <- "Ecuación Final Balanceada"
+        i <- 8
+      }
 
       shiny::renderUI({
         shiny::div(
           shiny::fluidRow(
             # column(4, withMathJax(Resol02_oxyde()[i,1])),
-            shiny::column(3, h3(Resol02_oxyde()[i,2])),
-            shiny::column(6, h3(shiny::withMathJax(Resol02_oxyde()[i,1]))),
-            shiny::column(3, h3(Resol02_oxyde()[i,3])) # ,
+            shiny::column(3, h3(texto01)),
+            shiny::column(6, h2(shiny::withMathJax(Resol02_oxyde()[i,1]))),
+            shiny::column(3, h3(texto02)) # ,
            #  shiny::column(3, tableOutput(paste0("table_", i)))
           ), shiny::br()
         )
       })
+      })
+
+
 
     })
 
@@ -230,7 +251,7 @@ server_ThugChemPage <- function(input, output, session) {
     # tabs_n <- as.list( tabs_n )
     # do.call(h2, tabs_n)
 
-  })
+
 
 
 
@@ -266,33 +287,117 @@ server_ThugChemPage <- function(input, output, session) {
 
         plot(1:10, 1:10, xlab = "", ylab = "",
              axes = F, col = input$bg_col,
-             main = paste0("Paso ", x, " de ", "8 - Óxidos"))
+             main = paste0("Paso ", x, " de ", "9 - Óxidos"),
+             cex.main=2)
 
         # Ecuacion
-        graphics::text(x = 5, y = 2,
+        graphics::text(x = 5.5, y = 4,
              labels = latex2exp::TeX(special_selection02()[x,1]),
-                                     cex = 2 )
+                                     cex = 3, pos = 1 )
 
         # General
-        text(5, 7, Resol02_oxyde()[x,2], cex = 2, col = input$"text_col01" )
+        text(5.5, 10, Resol02_oxyde()[x,2], cex = 2, col = input$"text_col01", pos = 1 )
 
         # Especifico
-        text(5, 4, Resol02_oxyde()[x,3], cex = 2, col = input$"text_col02" )
+        text(5.5, 8, Resol02_oxyde()[x,3], cex = 2, col = input$"text_col02", pos = 1 )
 
-         })
+         })#, height = 800, width = 1000
     })
   })
 
+  # Grafico 9 agregado extra
+  observe({
+    lapply(9, function(x) {
+      output[[paste0("plot_", x)]] <- renderPlot({
+
+        plot(1:10, 1:10, xlab = "", ylab = "",
+             axes = F, col = input$bg_col)
+
+        # Plot region color
+        rect(par("usr")[1], par("usr")[3],
+             par("usr")[2], par("usr")[4],
+             col = input$bg_col) # Color
+
+        # Add a new plot
+        par(new = TRUE)
+
+
+        plot(1:10, 1:10, xlab = "", ylab = "",
+             axes = F, col = input$bg_col,
+             main = paste0("Paso ", x, " de ", "9 - Óxidos"),
+             cex.main=2)
+
+        # Ecuacion
+        graphics::text(x = 5.5, y = 4,
+                       labels = latex2exp::TeX(special_selection02()[x-1,1]),
+                       cex = 3, pos = 1 )
+
+        # General
+        text(5.5, 10, "Ecuación Final Balanceada", cex = 4, col = input$"text_col01", pos = 1 )
+
+        # Especifico
+        # text(5.5, 8, Resol02_oxyde()[x,3], cex = 2, col = input$"text_col02", pos = 1 )
+
+      })#, height = 800, width = 1000
+    })
+  })
+  ############################
   observe({
     lapply(1:8, function(x) {
       output[[paste0("table2_", x)]] <- renderTable({ special_selection()[[x]] })
     })
   })
 
+  # Tabla 9 agregada extra
+  observe({
+    lapply(9, function(x) {
+      output[[paste0("table2_", x)]] <- renderTable({ special_selection()[[x-1]] })
+    })
+  })
+
+  ###############################
+
+  # Solo solucion final
+  output$SolucionFinal <- renderPlot({
+
+    x <- 8
+
+    plot(1:10, 1:10, xlab = "", ylab = "",
+         axes = F, col = input$bg_col)
+
+    # Plot region color
+    rect(par("usr")[1], par("usr")[3],
+         par("usr")[2], par("usr")[4],
+         col = input$bg_col) # Color
+
+    # Add a new plot
+    par(new = TRUE)
+
+
+    plot(1:10, 1:10, xlab = "", ylab = "",
+         axes = F, col = input$bg_col,
+         main = "",
+         cex.main=2)
+
+    # Ecuacion
+    graphics::text(x = 5.5, y = 4,
+                   labels = latex2exp::TeX(special_selection02()[x-1,1]),
+                   cex = 3, pos = 1 )
+
+    # General
+    text(5.5, 10, "Ecuación Final Balanceada", cex = 4, col = input$"text_col01", pos = 1 )
+
+    # Especifico
+    # text(5.5, 8, Resol02_oxyde()[x,3], cex = 2, col = input$"text_col02", pos = 1 )
+
+  })
+
+  ##########################################################################
   # Texto Dinamico
   output$ploteo_dinamico <- shiny::renderUI({
 
-    n <- 8
+    # n <- 8
+    n <- 9
     sapply(1:n, function(i) {
 
 
@@ -320,7 +425,10 @@ server_ThugChemPage <- function(input, output, session) {
     shiny::tabsetPanel(
       shiny::tabPanel("Texto paso a paso", shiny::uiOutput("newtabs")),
       shiny::tabPanel("Pleoteo Dinamico", shiny::uiOutput("ploteo_dinamico")),
-      shiny::tabPanel("En una imagen 01", shiny::plotOutput("plotPack01")),
+      shiny::tabPanel("Solución Final", shiny::plotOutput("SolucionFinal")),
+      shiny::tabPanel("En una imagen", shiny::plotOutput("plotPack01"), br(),br(),br(),
+                      br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),
+                      br(),br(),br(),br()),
       shiny::tabPanel("Nomenclatura", shiny::plotOutput("plotPack02")),
       shiny::tabPanel("Como texto", shiny::uiOutput("tablas_dinamico"))
 
