@@ -111,18 +111,25 @@ server_ThugChemPage <- function(input, output, session) {
     the_valence <- capsule()[[2]][1]
     gas_status_element <- capsule()[[3]][1]
     language <- capsule()[[4]][1]
-
+    fusion <- paste0("_",chem_symbol, the_valence, "_")
+    #
     # chem_symbol <- "H"
     # the_valence <- 1
     # gas_status_element <- TRUE
-
+    # language <- "esp"
     # # # NOTAAAAA # # #
     # Esto hay que cambiarlo, para que no lo calcule, sino que
     # lo tome directamente de PackTC_04_Oxyde !!!!!!!!!!!
-    ThugChemR::Resolution_Oxyde(chem_symbol = chem_symbol,
-                                element_valence = the_valence,
-                                gas_status_element = gas_status_element,
-                                language = language)[["format02_oxyde"]]
+    aca <- names(PackTC_04_Oxyde[[language]])
+    dt_este <- grepl(pattern = fusion, x = aca)
+    el_elegido <- aca[dt_este]
+
+    ThugChemR::PackTC_04_Oxyde[[language]][[el_elegido]][["format02_oxyde"]]
+
+    # ThugChemR::Resolution_Oxyde(chem_symbol = chem_symbol,
+    #                             element_valence = the_valence,
+    #                             gas_status_element = gas_status_element,
+    #                             language = language)[["format02_oxyde"]]
 
 
   })
