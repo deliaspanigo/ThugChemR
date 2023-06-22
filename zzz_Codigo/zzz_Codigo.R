@@ -24,3 +24,5 @@ install()
 
 # rename_files(old = "Nomenclature_Oxyde",
 #              new = "Take_Nomenclature_Oxyde")
+
+renv::init()

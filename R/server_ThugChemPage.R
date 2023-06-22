@@ -420,14 +420,14 @@ server_ThugChemPage <- function(input, output, session) {
 
     div(
     shiny::tabsetPanel(
-      shiny::tabPanel("Texto paso a paso", shiny::uiOutput("newtabs")),
+      shiny::tabPanel("Paso a paso", shiny::uiOutput("newtabs")),
       shiny::tabPanel("Pleoteo Dinamico", shiny::uiOutput("ploteo_dinamico")),
       shiny::tabPanel("Solución Final", shiny::plotOutput("SolucionFinal")),
-      shiny::tabPanel("En una imagen", shiny::plotOutput("plotPack01"), br(),br(),br(),
+      shiny::tabPanel("Una imagen", shiny::plotOutput("plotPack01"), br(),br(),br(),
                       br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),
                       br(),br(),br(),br()),
       shiny::tabPanel("Nomenclatura", shiny::plotOutput("plotPack02")),
-      shiny::tabPanel("Como texto", shiny::uiOutput("tablas_dinamico"))
+      shiny::tabPanel("Pasos sin textos", shiny::uiOutput("tablas_dinamico"))
 
 
     )
