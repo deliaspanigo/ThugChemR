@@ -96,9 +96,13 @@ server_ThugChemPage <- function(input, output, session) {
     the_valence <- capsule()[[2]]
     language <- capsule()[[4]]
 
-    ThugChemR::Plot_PackTC_04_Oxyde02(chem_symbol = chem_symbol,
-                                      element_valence = the_valence,
-                                      language = language)
+    fusion <- paste0("_", chem_symbol, the_valence, "_")
+
+    aca <- names(PackTC_04_Oxyde[[language]])
+    dt_este <- grepl(pattern = fusion, x = aca)
+    el_elegido <- aca[dt_este]
+
+    ThugChemR::PackTC_04_Oxyde[[language]][[el_elegido]][["format02_oxyde"]]
 
     # })
   })
@@ -194,7 +198,7 @@ server_ThugChemPage <- function(input, output, session) {
       shiny::renderUI(
         div(
         shiny::fluidRow(
-          shiny::column(6, h3(shiny::withMathJax(Resol02_oxyde()[i,1]))),
+          shiny::column(6, h2(shiny::withMathJax(Resol02_oxyde()[i,1]))),
           shiny::column(2),
           shiny::div(shiny::column(4, tableOutput(paste0("table_", i))), style = "font-size:150%")
         ), br())
